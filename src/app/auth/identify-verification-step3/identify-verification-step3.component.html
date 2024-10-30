@@ -1,0 +1,30 @@
+<app-auth-nav></app-auth-nav>
+<div  class="card border-0" style="margin-left: 250px;" >
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      
+      <h3 >Enable Google Authenticator</h3>
+      <img  src="../../../assets/Landing page AIDUS/03.png" style="height: 60px;">
+      <h6 style="font-size: 20px; text-align: center;">Save this Backup Key in a <br>secure location</h6>
+      <div class="d-flex flex-row" style="justify-content: center;">
+        <div class="d-flex flex-column" style="text-align: center;">
+      <div class="d-flex flex-row" style="justify-content: center;">
+      <h5>{{data?.secretKey}}</h5>
+      <!-- <img  src="../../../assets/Landing page AIDUS/Copy icon.png" style="height: 20px; width: 20px;"> -->
+      
+    </div>
+      </div>
+ 
+    </div>
+    
+
+    <p style="text-align: center;">This key will allow you to recover your Authenticator incase <br>You lose your phone</p>
+    <div class="d-flex flex-column" style="text-align: center;">
+        <div class="d-flex flex-row" style="justify-content: center; margin-left: -73px;">
+     <button class="button"  [routerLink]="['/auth/identification-verification-step-2']">Previous</button>
+      <button class="btn btn-primary border-0"  [routerLink]="['/auth/identification-verification-step-4']">Continue</button>
+     
+      </div>
+      </div>
+    
+    </div>
+  </div>

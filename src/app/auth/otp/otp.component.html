@@ -1,0 +1,22 @@
+<app-auth-nav></app-auth-nav>
+<form [formGroup]="otpForm">
+  
+<div  class="card border-0" style="margin-left: 320px;" >
+
+        <div class="card-body d-flex flex-column justify-content-around align-items-center">
+     
+      <h3 >Verify Phone Number</h3>
+      <p class="card-text">A verification code has been sent to your phone number and remains valid for 15 minutes.
+      Please do not share this code with others.</p>
+      <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+      <div class="alert alert-danger" *ngIf="this.message" style="width: 365px;">Please Enter Correct Otp</div>     
+      <div>
+      <ng-otp-input (onInputChange)="onOtpChange($event)"  [config]="{length:6}"></ng-otp-input>
+    </div>
+    <diV class="d-flex flex-column" style="justify-content: center;">
+      <button class="btn btn-primary border-0"  (click)="postOtp()">Continue</button>
+      <p style="text-align: center;">Resend OTP in 2:00</p>
+    </diV>
+    </div>
+  </div>
+</form>

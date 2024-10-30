@@ -1,0 +1,268 @@
+<div class="container">
+  <h1>Stake Your Assets</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <div
+        (click)="earnfunction()"
+        class="chip mt-5"
+        [ngClass]="{ active: earn == true }"
+      >
+        <h4>Earn</h4>
+        <p style="margin-bottom: 3px">Grow the quantity of your crypto.</p>
+        <p>Tokens supported: <b>BTC, ETH, USDT</b></p>
+      </div>
+      <div
+        (click)="earnSafefunction()"
+        class="chip mt-3"
+        [ngClass]="{ active: earnSafe == true }"
+      >
+        <h4>Earn Safe</h4>
+        <p style="margin-bottom: 3px">Grow the value of your assets.</p>
+        <p>Tokens supported: <b>BTC, ETH, USDT</b></p>
+      </div>
+      <div
+        (click)="earnMaxfunction()"
+        class="chip mt-3"
+        [ngClass]="{ active: earnMax == true }"
+      >
+        <h4>Earn Maximum</h4>
+        <p style="margin-bottom: 3px">
+          Earn crypto on performance basis. Stake Aidus, earn Tether.
+        </p>
+        <p>Tokens supported: <b>AIDUS</b></p>
+      </div>
+    </div>
+    <div class="col-sm-6" style="margin-left: -40px">
+      <div *ngIf="earn" class="container bg mt-5" style="width: 660px">
+        <h4>Product List</h4>
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col" >Coin</th>
+              <!-- <th scope="col">Start Date</th>
+              <th scope="col">End Date</th> -->
+              <th scope="col">Apr(%)</th>
+              <th scope="col">Lock Period</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let obj of user">
+              <td>{{ obj.coins.coin }}</td>
+              <!-- <td>{{ obj.startDate }}</td>
+              <td>{{ obj.endDate }}</td> -->
+              <td>{{ obj.apr }}</td>
+              <td>{{ obj.stakingPeriod }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary stake1"
+                  (click)="editRow(obj.id)"
+                >
+                  Stake Now
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <pagination-controls
+          (pageChange)="pageChangeEvent($event)"
+        ></pagination-controls> -->
+      </div>
+
+      <div *ngIf="earnSafe" class="container bg mt-5" style="width: 660px">
+        <h4>Product List</h4>
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col">Coin</th>
+              <!-- <th scope="col">Start Date</th>
+              <th scope="col">End Date</th> -->
+              <th scope="col">Apr(%)</th>
+              <th scope="col">Lock Period</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let obj of user1">
+              <td>{{ obj.coins.coin }}</td>
+              <!-- <td>{{ obj.startDate }}</td>
+              <td>{{ obj.endDate }}</td> -->
+              <td>{{ obj.apr }}</td>
+              <td>{{ obj.stakingPeriod }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary stake1"
+                  (click)="editSafe(obj.id)"
+                >
+                  Stake Now
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <pagination-controls
+          (pageChange)="pageChangeEvent($event)"
+        ></pagination-controls> -->
+      </div>
+
+      <div *ngIf="earnMax" class="container bg mt-5" style="width: 660px">
+        <h4>Product List</h4>
+        <table class="table" style="table-layout: fixed; width: 100%">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 70px">Coin</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Apr(%)</th>
+              <th scope="col">Lock Period</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let obj of user2">
+              <td>{{ obj.coins.coin }}</td>
+              <td>{{ obj.startDate }}</td>
+              <td>{{ obj.endDate }}</td>
+              <td>{{ obj.apr }}</td>
+              <td>{{ obj.stakingPeriod }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary stake1"
+                  (click)="editMaxRow(obj.id)"
+                >
+                  Stake Now
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <pagination-controls
+          (pageChange)="pageChangeEvent($event)"
+        ></pagination-controls> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container bg mt-5">
+  <div
+    class="tabel-heading"
+    style="display: flex; justify-content: space-between"
+  >
+    <h4>Locked Staking</h4>
+    <div style="display: flex">
+      <div class="dropdown" style="margin-right: 2rem">
+        <h6>coin</h6>
+        <button
+          class="dropdown-toggle removeoutline"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          All
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Eth</a></li>
+          <li><a class="dropdown-item" href="#">BTC</a></li>
+          <li><a class="dropdown-item" href="#">USDT</a></li>
+          <li><a class="dropdown-item" href="#">Aidus</a></li>
+        </ul>
+      </div>
+      <div class="dropdown" style="margin-right: 2rem">
+        <h6>locking Period</h6>
+        <button
+          class="dropdown-toggle removeoutline"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Days
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">90 Days</a></li>
+          <li><a class="dropdown-item" href="#">120 Days</a></li>
+          <li><a class="dropdown-item" href="#">180 Days</a></li>
+          <li><a class="dropdown-item" href="#">365 Days</a></li>
+        </ul>
+      </div>
+
+      <div class="date" style="margin-right: 2rem">
+        <h6>Date</h6>
+        <input type="date" class="removeoutline" />
+        <input type="date" class="removeoutline" />
+      </div>
+
+      <button
+        type="button"
+        class="btn1 btn-outline-primary mt-2"
+        style="width: 102px; height: 43px"
+      >
+        <h6 style="margin-top: 8px">Reset</h6>
+      </button>
+      <button
+        class="btn btn-primary mt-2"
+        type="submit"
+        style="width: 102px; height: 43px; margin-left: 7px"
+      >
+        <h6 style="margin-top: 6px">Search</h6>
+      </button>
+    </div>
+  </div>
+  <table class="table" style="margin-top: 20px">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Product</th>
+        <th scope="col">coin</th>
+        <th scope="col">APR(%)</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">USD Equivalent</th>
+
+        <th scope="col">Lock Period</th>
+
+        <th scope="col">Auto Renew</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let obj of earnData1
+            | paginate
+              : {
+                  itemsPerPage: this.filterObj.limit,
+                  currentPage: this.filterObj.p,
+                  totalItems: copyArr
+                }
+        "
+      >
+        <td scope="row">{{ obj.startDate }}</td>
+        <td>{{ obj.productName }}</td>
+        <td>{{ obj.coin }}</td>
+        <td>{{ obj.apr }}</td>
+        <td>{{ obj.totalAmt | number }}</td>
+        <td>{{ obj.usdEquivalence }}</td>
+        <td>{{ obj.lockingPeriod }}</td>
+        <td>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls
+    (pageChange)="pageChangeEvent1($event)"
+  ></pagination-controls>
+</div>

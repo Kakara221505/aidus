@@ -1,0 +1,239 @@
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+.chip {
+  background: #ffffff;
+  border: 0.826256px solid rgba(3, 84, 166, 0.3);
+  box-shadow: 0px 4px 3px rgba(16, 24, 40, 0.1);
+  border-radius: 8px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 6px;
+  color: #2c3131;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+}
+.active {
+  padding: 20px;
+  background: #0354a6;
+  box-shadow: 0px 4px 3px rgba(76, 86, 97, 0.1);
+  border-radius: 8px;
+  width: 80%;
+  color: white !important;
+}
+.chip:hover {
+  padding: 20px;
+  background: #0354a6;
+  box-shadow: 0px 4px 3px rgba(76, 86, 97, 0.1);
+  border-radius: 8px;
+  width: 80%;
+  color: white !important;
+}
+
+.dropdown-menu img {
+  height: 24px;
+  width: 24px;
+}
+
+.form-group {
+  border: 2px solid;
+  border-color: rgba(3, 84, 166, 0.5);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 57px;
+  width: 100%;
+}
+
+input:focus,
+button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+label {
+  float: right;
+  font-size: 14px;
+  color: #585858;
+}
+
+.bg {
+  background: #ffffff;
+  box-shadow: 0px 4px 3px rgba(16, 24, 40, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  width: 1300px;
+}
+
+.btn1 {
+  background: white;
+  height: 56px;
+  width: 51%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #0354a6;
+  border: 2px solid #0354a6;
+  border-radius: 6px;
+}
+
+.btn {
+  background: #0354a6;
+  height: 56px;
+  width: 51%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #ebebeb;
+}
+
+.removeoutline {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.percent {
+  border: 1px solid #2c3131;
+  border-radius: 4px;
+  background-color: white;
+  color: #2c3131;
+  font-size: 14px;
+  margin: 7px;
+}
+
+.percent1 {
+  border: 1px solid #2c3131;
+  border-radius: 4px;
+  background-color: white;
+  color: #2c3131;
+  font-size: 14px;
+  width: 120px;
+}
+
+span {
+  color: #585858;
+  font-size: 14px;
+}
+
+.stake {
+  background: #0354a6;
+  height: 56px;
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #ebebeb;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.stake1 {
+  background: white;
+  height: 41px;
+  width: 121px;
+  font-family: "Poppins";
+  font-style: normal;
+  /* font-weight: 500; */
+  font-size: small;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #0354a6;
+  border-color: #0354a6;
+  /* margin-top: 60px; */
+  /* margin-bottom: 20px; */
+  margin-left: -6px;
+  border-radius: 7px;
+}
+
+thead {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+  color: #585858;
+  border-bottom: 1px solid rgba(3, 84, 166, 0.5);
+}
+
+tbody th p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 160%;
+  color: #2c3131;
+}
+
+tbody th img {
+  margin-right: 8px;
+}
+
+tbody th {
+  display: flex;
+  flex-direction: row;
+}
+
+tbody td {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #424242;
+}
+
+.filter {
+  width: 96px;
+  height: 40px;
+  border-radius: 5px;
+  color: #0354a6;
+  border: 1px solid #0354a6;
+  background-color: white;
+  outline: none;
+  margin-right: 10px;
+}
+
+.export {
+  width: 96px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0354a6;
+  border: none;
+  outline: none;
+}
+.table > :not(:first-child) {
+  border-top: 2px solid #c2e1ff;
+}
+body{
+  overflow-y: clip;
+}

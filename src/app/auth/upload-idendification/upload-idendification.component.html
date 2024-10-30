@@ -1,0 +1,134 @@
+<app-auth-nav></app-auth-nav>
+<div  class="card border-0" style="margin-left: 320px;" >
+  <form [formGroup]="documentForm">
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+       
+      <h3 >Identity Verification</h3>
+      <div style="margin-bottom: 340px;">
+      <p class="card-text" >Select and Upload any 1 of your documents to complete the <br>verification process</p>
+      
+      <p style="font-size: 20px;
+      margin-left: 100px;
+      margin-bottom: -23px;
+       ">Select Document</p>
+      <div class="form-group" style="margin-left: 100px;">
+            
+        <select  (change)="getAddressProof($event)" formControlName="documentId" class="form-select" aria-label="Default select example"  style="width: 422px;" id="inputGroupSelect01" name="selectOption">
+       
+          <!-- <option value="">Select Documents</option>
+          <option [ngValue]="type">Driving License</option>
+          <option [ngValue]="type1">Passport</option>
+          <option [ngValue]="type2">Resident Identity Card</option> -->
+          <option value=""  >Select Document</option>
+          <option  *ngFor="let document of listDocumnet" [value]="document.id">{{document.documentName}}</option>
+          
+        </select>
+      </div>
+      <!-- <div>
+      <div class="square">
+        <input type="file" id="myfile" name="myfile" (change)="onFileChange($event)" >
+        <img  src="../../../assets/Landing page AIDUS/Icon feather-plus Section 9.png">
+      </div>
+     
+      <div class="square1" >
+        <input type="file" id="myfile" name="myfile" (change)="onFileChange1($event)">
+        <img  src="../../../assets/Landing page AIDUS/Icon feather-plus Section 9.png">
+      </div>
+    
+    </div> -->
+    <p style="color: red; margin-left:183px;" *ngIf="this.message==400" >Please Enter Given Field</p>
+    <p style="color: red; margin-left:183px;" *ngIf="this.message=='fail'">Document already uploaded</p>
+    <div class="d-flex flex-row" style="justify-content: center;" *ngIf="this.address=='1' || this.address=='2'">
+     
+    <div class="d-flex flex-column">
+    
+    <div class="square">
+    <label for="inputTag">
+      <img  [src]="url" *ngIf="!this.reader" style="height: 50px; width:50px;">
+      <img  [src]="url" *ngIf="this.reader" style="height: 150px; width:150px;">
+      <!-- <img  [src]="fronturl" style="height: 150px; width:150px;"> -->
+      
+      <input id="inputTag" type="file" name="myfile" (change)="onFileChange($event)"/>
+    </label>
+
+  </div>
+  <span *ngIf="this.address=='1'"  style="margin-right:23px;font-size: 14px;">Driving License(Front)</span>
+  <span *ngIf="this.address=='2'" style="margin-right:74px; font-size: 14px;"> Passport (Back)</span>
+</div>
+<div class="d-flex flex-column">
+
+  <div class="square1">
+    <label for="inputTag1">
+    
+      <img  [src]="url1" *ngIf="!this.reader1" style="height: 50px; width:50px;">
+      <img  [src]="url1" *ngIf="this.reader1" style="height: 150px; width:150px;">
+      <!-- <img  [src]="backurl" style="height: 150px; width:150px;"> -->
+
+      <input id="inputTag1" type="file" name="myfile1" (change)="onFileChange1($event)"/>
+    </label>
+  </div>
+  
+  <span *ngIf="this.address=='1'" style="margin-right:23px; font-size: 14px;">Driving License(Back)</span>
+  <span *ngIf="this.address=='2'" style="margin-right:74px; font-size: 14px;">Passport(Back)</span>
+  </div>
+    <!-- <p >Driving License(Back)</p> -->
+  </div>
+ 
+    </div>
+
+      <button class="btn btn-primary border-0" style="margin-top:-280px"  (click)="open1(content1)">Continue</button>
+     
+  
+    </div>
+  </form>
+  </div>
+
+  <ng-template #content1 let-modal>
+    
+ 
+    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    
+     
+    
+      <div  class="card border-0">
+        <div class="card-body d-flex flex-column justify-content-around align-items-center" style="margin:68px">
+          
+          <!-- <h4 >2 Factor Authentication</h4> -->
+          <div>
+            <img
+            src="../../../assets/review.png"
+            alt="aidus token image"
+            class="image"
+          />
+          </div>
+          <p class="card-text">We are reviewing your documents. The verification status will change automatically once the review is complete. If you experience any issues.Please contact our Customer Service Team</p>
+          <button class="btn btn-primary border-0" (click)="modal.close('Save click')"  (click)="open(content)">Next</button>
+          <!-- <button class="btn1"  (click)="modal.close('Save click')">Skip For Now</button> -->
+        </div>
+      </div>
+    </div>
+    
+    
+      </ng-template>
+
+  <ng-template #content let-modal>
+    
+ 
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+
+ 
+
+  <div  class="card border-0">
+    <div class="card-body d-flex flex-column justify-content-around align-items-center" style="margin:68px">
+      
+      <h4 >2 Factor Authentication</h4>
+      <p class="card-text">2 Factor authentication adds an extra layer of protection to your account.Whenever you sign in you'll need to enter the Google authenticator code.</p>
+      <button class="btn btn-primary border-0" [routerLink]="['/auth/identification-verification']" (click)="modal.close('Save click')">Start Verification Process</button>
+      <button class="btn1"  (click)="modal.close('Save click')">Skip For Now</button>
+    </div>
+  </div>
+</div>
+
+
+  </ng-template>

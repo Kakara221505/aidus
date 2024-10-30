@@ -1,0 +1,31 @@
+<div class="container" [hidden]="isShowDiv">
+  <div
+    class="row"
+    
+  >
+    <div class="card position-relative">
+      <div class="d-flex flex-row">
+        <h6 style="color: #0354a6; margin-top: 22px; margin-left: 27px">
+          Complete your KYC to enjoy the full range of features offered by our
+          website.
+        </h6>
+        <div
+          class="d-flex flex-row"
+          style="margin-top: 17px; margin-left: 662px"
+        >
+          <a
+            (click)="toggleDisplayDiv()"
+            style="margin-left: -80px; margin-top: 6px"
+            >Not Now</a
+          >
+          <button
+            class="btn btn-outline-primary resend"
+            [routerLink]="['/auth/personal-information']"
+          >
+            Enable KYC
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,162 @@
+<div class="container border-0">
+  <div class="row" style="max-height: 650px; height: 650px">
+    <div class="col-md-7 d-flex flex-column">
+      <div
+        class="card border-0"
+        style="height: 90%; width: 100%; margin-bottom: 36px"
+      >
+        <h3 class="card-title">Your Funds</h3>
+        <div class="row" style="height: 100%">
+          <div class="col-md-6 d-flex flex-column justify-content-between">
+            <div style="margin-top: 16px">
+              <p class="balance">Wallet Balance</p>
+              <h3
+                style="
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 30px;
+                  line-height: 134.3%;
+                  color: #0354a6;
+                "
+              >
+                {{ depositData?.totalBalance.substring(0, 13) }}
+              </h3>
+            </div>
+            <button
+              class="btn"
+              routerLink="/dashboard/withdraw"
+              style="width: 300px"
+            >
+              Withdraw
+            </button>
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-between">
+            <div style="margin-top: 16px">
+              <p class="balance">Staked Amount</p>
+              <h3
+                style="
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 134.3%;
+                  color: #424242;
+                "
+              >
+                ${{ depositData?.stakedAmount }}
+              </h3>
+            </div>
+            <button
+              class="btn"
+              routerLink="/dashboard/staking"
+              style="width: 300px"
+            >
+              Stake Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Asset Type</th>
+              <th scope="col">Balance</th>
+              <th scope="col">Staked Amount</th>
+              <th scope="col">Interest Earned</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <img
+                  src="../../../assets/Landing page AIDUS/AIDUS Section 3.png"
+                  alt="aidus token image"
+                />
+                <p>AIDUS</p>
+              </th>
+              <td>
+                {{ depositData?.aidusBalance.substring(0, 13) }} AIDUS
+                <p></p>
+              </td>
+              <td>{{ depositData?.aidusStakedAmount }}</td>
+              <td>
+                <img
+                  src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                  alt=""
+                />
+                {{ depositData?.aidusInterestEarned | number }}%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <img
+                  src="../../../assets/Landing page AIDUS/btc Section 3.png"
+                  alt="btc image"
+                />
+                <p>Bitcoin</p>
+              </th>
+              <td>
+                {{ depositData?.bitcoinBalance.substring(0, 13) }} BTC
+                <p></p>
+              </td>
+              <td>{{ depositData?.bitcoinStakedAmount }}</td>
+              <td>
+                <img
+                  src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                  alt=""
+                />{{ depositData?.bitcoinInterestEarned | number }}%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <img
+                  src="../../../assets/Landing page AIDUS/eth- Section 3.png"
+                  alt="Eth token image"
+                />
+                <p>Ethereum</p>
+              </th>
+              <td>
+                {{ depositData?.ethBalance.substring(0, 13) }} ETH
+                <p></p>
+              </td>
+              <td>{{ depositData?.ethStakedAmount }}</td>
+              <td>
+                <img
+                  src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                  alt=""
+                />{{ depositData?.ethInterestEarned | number }}%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <img
+                  src="../../../assets/Landing page AIDUS/USDT Section 3.png"
+                  alt="USDT image"
+                />
+                <p>USDT</p>
+              </th>
+              <td>
+                {{ depositData?.usdtBalance.substring(0, 13) }} USDT
+                <p></p>
+              </td>
+              <td>{{ depositData?.usdtStakedAmount }}</td>
+              <td>
+                <img
+                  src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                  alt=""
+                />{{ depositData?.usdtInterestEarned | number }}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card border-0" style="height: 100%; width: 100%">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

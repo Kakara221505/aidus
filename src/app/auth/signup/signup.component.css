@@ -1,0 +1,36 @@
+.show-btn img{
+  width: 19px;
+  height: 17px;
+}
+
+form > * {
+  margin-top: 10px;
+}
+
+.input-label {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #585858;
+  margin-bottom: 5px;
+}
+
+.boxes {
+  height: 56px;
+  width: 100%;
+  border-color: rgba(3, 84, 166, 0.5);
+  border-width: 2px;
+}
+
+.link {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0354A6;
+}

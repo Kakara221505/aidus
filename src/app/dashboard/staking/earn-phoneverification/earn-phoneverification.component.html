@@ -1,0 +1,45 @@
+
+
+<div class="container bg" style="height:600px;">
+  <div style="margin-left: 30rem; font-size: 32px; margin-top: 35px;">
+    <h3>Security Verification</h3>
+  </div>
+  <span style="margin-left: 420px; font-weight: 16px"
+    >Complete the 2 Factor Authentication to proceed further.</span
+  >
+  <div>
+    <form class="row g-3" style="margin-left: 22rem; margin-top: 1rem"  [formGroup]="addOtp">
+      <span style="font-size: 18px; font-weight: 550; color: #585858"
+        >Phone number Verification</span
+      >
+      <app-loader *ngIf="fetching">{{fetching}}</app-loader>
+      <!-- <div class="alert alert-success" *ngIf="this.successmessage" >{{this.successmessage}}</div>   -->
+      <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div> 
+      <div class="col-md-6">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input
+          type=""
+          class="form-control"
+          [readonly]='!toggleButton'
+          formControlName="otp"
+          [(ngModel)]="otp"
+          id="inputPassword2"
+          placeholder="Enter the 6-digit Verification code"
+          style="height: 55px;"
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="getOtp" (click)="AddOtp()" >Get OTP</button>
+      </div>
+      <!-- <span style="font-size: 18px; font-weight: 500; color: #585858; margin-top: 30px;"
+        >Security Verification unavailable?</span
+      > -->
+      <button type="button" class="btn stake" style="width: 50%" 
+      (click)="AddOtpVerify()" [disabled]="!otp">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+

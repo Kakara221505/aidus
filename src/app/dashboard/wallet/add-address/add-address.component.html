@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="container bg">
+        <form class="mt-5" [formGroup]="addAddress">
+            <app-loader *ngIf="fetching">{{fetching}}</app-loader>
+        <!-- <div class="alert alert-success" *ngIf="this.successmessage" >{{this.successmessage}}</div>   -->
+        <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>    
+        <h1>Add New Address</h1>
+        <!-- <app-loader *ngIf="fetching">{{fetching}}</app-loader>
+        <div class="alert alert-success" *ngIf="this.successmessage" >{{this.successmessage}}</div>  
+        <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>     -->
+       
+
+            <div class="input-flex">
+                <label>Address Name</label>
+                <div class="form-group">
+                    <input type="text"  formControlName="addresName" [(ngModel)]="addresName"
+                    class="form-control border-0" placeholder="Enter name">
+                </div>
+            </div>
+          
+       
+            <!-- <div class="input-flex">
+                <label>Enter Address</label>
+                <div class="form-group">
+                    <input type="text"
+                    class="form-control border-0" placeholder="Enter address here">
+                </div>
+            </div> -->
+            <div class="input-flex">
+                <label>Enter Address</label>
+            <div class="form-group">
+            <input type="text" class="form-control border-0" name="amount" placeholder="Enter address"   formControlName="address" [(ngModel)]="address">
+            <!-- <select  class="custom-select border-0" id="inputGroupSelect01" name="selectOption" formControlName="coinId" >
+     
+                <option value="" >Select Coin</option>
+                <option  *ngFor="let coin of coinList" [value]="coin.id">{{coin.coin}}</option>
+             </select> -->
+
+                </div>
+                   </div>
+
+            <div class="input-flex">
+                <label>Re-enter Address</label>
+                <div class="form-group">
+                    <input type="text"
+                    class="form-control border-0" placeholder="Enter address here">
+                </div>
+            </div>
+        
+                <div class="next">
+                    <button type="submit" class="btn" (click)="AddAddress()" [disabled]="!addresName || !address">Next</button>
+                </div>
+        </form>
+    </div>
+</div>

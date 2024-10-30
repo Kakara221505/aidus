@@ -1,0 +1,138 @@
+<div class="container-fluid bg">
+  <div class="bg1">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="d-flex justify-content-start align-iten-center row" >
+          <div class="bgtext1 col-md-6">
+          
+            <h1 class="slider">
+              Transparency is our
+            </h1>
+            <br />
+            <h1
+            class="slider1"
+            >
+              Key priority
+            </h1>
+            <span
+              >Where are the profits coming from ? At Aidus, instead of lending
+              your<br />
+              crypto assets to the borrowers,we invest them for you with<br />
+              minimized risk trading. We disclose our performance report
+              bi-weekly<br /> after
+              audited and notanized by the top accountant firm.
+            </span>
+            <div
+              class="row"
+              
+              [routerLink]="['/home/transparency-auditreport']"
+            >
+              <button class="btn btn0 btn-primary">
+                Check Our Performance >
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="../assets/Landing page AIDUS/A.png"
+              class="image"
+              alt=""
+            />
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template ngbSlide>
+
+      <div class="d-flex justify-content-start align-iten-center row">
+        <div class="bgtext1 col-md-6">
+          <h1 class="slider">Create your own</h1>
+          <div>
+            <span class="slider">portfolio </span>
+            <span  class="slider2">
+              Earn during the bull & bear market</span
+              >
+          </div>
+
+          <span>
+            Aidus provides diverse products which you could increase your
+            assets <br />in all circumstances
+          </span>
+          <div class="row"></div>
+          <button
+            class="btn btn0 btn-primary"
+            *ngIf="!user_id"
+            [routerLink]="['/auth/signup']"
+          >
+            Get Started >
+          </button>
+          <button
+            class="btn btn0 btn-primary"
+            *ngIf="user_id"
+            [routerLink]="['/dashboard/staking']"
+          >
+            Get Started >
+          </button>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="../assets/Landing page AIDUS/B.png"
+           class="image"
+            alt=""
+          />
+        </div>
+      </div>
+      </ng-template>
+
+      <ng-template ngbSlide>
+
+      <div class="d-flex justify-content-start align-iten-center row">
+        <div class="bgtext1 col-md-6">
+          <div>
+            <div class="d-flex flex-row">
+              <h1  class="slider3">
+                Get
+              </h1>
+
+              <h1 class="slider2">
+                &nbsp;&nbsp;More From Your
+              </h1>
+            </div>
+            <div class="d-flex flex-row">
+              <span class="slider2"
+                >Crypto</span
+              >
+              <span class="slider3"
+                >-Earn Crypto</span
+              >
+            </div>
+
+              <span class="slider2">easily &nbsp;</span>
+              <span class="slider3">and &nbsp;</span>
+              <span class="slider2">securely</span>
+            </div>
+            
+            <p  class="content">Aidus connects your crypto to real-world investment, <br>letting you earn up to 24% annual intrest</p>
+            <div class="row" >
+          
+            </div>
+            <button class="btn btn0 btn-primary" *ngIf="!user_id" [routerLink]="['/auth/signup']">Get Started ></button>
+            <button class="btn btn0 btn-primary" *ngIf="user_id"  [routerLink]="['/dashboard']">Get Started ></button>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="../assets/Landing page AIDUS/C.png"
+        
+              class="image"
+              alt=""
+            />
+
+          </div>
+
+         
+      </div>
+      </ng-template> 
+    
+    </ngb-carousel>
+  </div>
+</div>

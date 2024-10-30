@@ -1,0 +1,6 @@
+<app-dash-nav *ngIf="depositData?.ambassador ==false"></app-dash-nav>
+<app-dash-nav-ambessdor *ngIf="depositData?.ambassador ==true"></app-dash-nav-ambessdor>
+<app-dash-pop-up *ngIf="depositData?.googleAuthEnable2FA ==false && depositData?.documentsVerified ==true"></app-dash-pop-up>
+<app-dash-kyc *ngIf="depositData?.documentsAdminStatus ==null"></app-dash-kyc>
+<router-outlet></router-outlet>
+<div style="width: 100%; height: 100px;"></div>

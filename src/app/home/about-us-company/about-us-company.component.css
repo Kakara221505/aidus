@@ -1,0 +1,54 @@
+.bg0 {
+    background: aliceblue;
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+    /* border-radius: 6px; */
+    /* padding: 16px; */
+    height: 650px;
+    padding: 0px;
+    margin-top: -15px;
+    background-image: url("../../../assets/Background.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+.bg1{
+    /* padding: 10px; */
+    width: 450px;
+    margin-left: 140px;
+    margin-top: 150px;
+}
+.bg {
+  background: #d6e9f5e4;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  height: 700px;
+  padding: 0px;
+}
+.img1 {
+  width: 552px;
+  height: 403px;
+  margin-top: 20px;
+  margin-left: 126px;
+}
+.text1 {
+  /* font-size: 56px;
+  width: 602px;
+  font-weight: 600;
+  margin-top: 100px !important;
+  margin-left: 10px; */
+  margin-top: 111px;
+}
+.text {
+  margin-top: 45px;
+}
+.text3{
+    padding: 84px;
+    height: 600px;
+}
+.text4{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 60px;
+    
+}

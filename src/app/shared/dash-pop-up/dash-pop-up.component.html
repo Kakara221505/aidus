@@ -1,0 +1,13 @@
+<div class="container" [hidden]="isShowDiv">
+    <div class="row" style="height: 70px; width: 117%; margin-bottom: 40px; margin-left: -109px;">
+        <div class="card  position-relative">
+            <div class="d-flex flex-row">
+    <h6 style="color: #0354A6;margin-top: 22px;margin-left: 27px;" >Two Factor Authentication adds an additional layer of security to your account by requiring more than just a password  to log in.</h6>
+    <div class="d-flex flex-row" style="  margin-top: 17px; margin-left: 247px;">
+    <a (click)=toggleDisplayDiv()  style="margin-left:-51px">Not Now</a>
+    <button class="resend" [routerLink]="['/auth/identification-verification']">Enable 2FA</button>
+</div>
+</div>
+</div>
+</div>
+    </div>

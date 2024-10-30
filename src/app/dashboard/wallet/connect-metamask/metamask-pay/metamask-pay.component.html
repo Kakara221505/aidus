@@ -1,0 +1,30 @@
+<!-- <div *ngIf="sucess==false" class="container">
+    <h1>Via Metamask</h1>
+    <p>Pay {{amount}} ETH via Metamask</p>
+    <button type="button" (click)="pay()" class=" pay mt-5"> Pay Now</button>
+    <button type="button" (click)="cancle()"  class=" cancel mt-2"> Cancel</button>
+</div> -->
+
+<div *ngIf="sucess==true">
+    <h1>Deposit Successful</h1>
+    <p>Your deposit has been successful. You can check your updated balance in the wallet section.</p>
+    <div class="d-flex flex-column" style="justify-content: center;">
+        <img
+        alt=""
+        style="
+          height: 90px;
+          width: 90px;
+          margin-left: 200px;
+          margin-top: 25px;
+          margin-bottom: 41px;
+        "
+        src="../../../../assets/AIDUS wallet assets/Group 13460.png"
+      />
+      <div class="d-flex flex-row" >
+        <h5 style="font-size: 15px;">Amount Deposited</h5>
+        <h5 style="color: #0354A6;margin-left: 266px ;font-size: 15px;">{{amount}} {{coin}}</h5>
+    </div>
+    </div>
+    <button type="button" class="btn mt-5" (click)="done()">Done</button>
+
+</div>

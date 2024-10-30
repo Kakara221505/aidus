@@ -1,0 +1,75 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="row my-5" style="min-height: 540px;">
+    <div class="col-md-6 px-3">
+      <h1
+      style="
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 56px;
+          line-height: 70px;
+          font-feature-settings: 'liga' off;">
+        <p style="display: inline; color: #0354A6;">Grow</p> your <p style="display: inline; color: #0354A6;">Crypto</p> with Zero Efforts
+      </h1>
+
+      <p style="margin-top: 24px;">
+        Let your crypto assets work for you. Earn upto 24% annual <br>interet from AIDUS. Deposit your crypto & start earning <br> immediately.
+      </p>
+
+      <!-- <span style="margin-top: 24px;">
+        Let your crypto assets work for you. Earn upto 12% annual <br>interet from AIDUS. Deposit your crypto & start earning <br> immediately.
+      </span> -->
+
+    </div>
+    <div class="col-md-6">
+      <div class="card p-4 px-5 mx-auto border-0 d-flex flex-column justify-content-around" style="width: 90%; min-height: 484px; border-radius: 10px;">
+        <h2
+          class="card-title"
+          style="font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          /* identical to box height, or 133% */
+
+          display: flex;
+          align-items: center;
+
+          color: #2C3131;">Login</h2>
+        <form
+          class="d-flex flex-column justify-content-around"
+          style="height: 100%;"
+          (ngSubmit)="onLogin(loginForm)"
+          #loginForm="ngForm"
+        >
+        <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+        <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>      
+          <div class="form-group">
+            <label for="email" class="input-label">Email Address</label>
+            <input id="email" type="email" name="email" class="form-control boxes" ngModel required>
+          </div>
+          <div class="form-group position-relative">
+            <label for="password" class="input-label">Password</label>
+            <input id="password" [type]=" !show ? 'password': 'text' " name="password" class="form-control boxes" ngModel required minlength="6" maxlength="15">
+            <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="!show"><img style="margin-right: 6px;"  src="../../../assets/AIDUS login signup/Hicon/Outline/Show.png"></button>
+            <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="show"><img style="margin-right: 6px;"  src="../../../assets/AIDUS login signup/Hicon/Outline/Hide.png"></button>
+          </div>
+          <div class="position-relative py-2" style="width: 100%; height: 40px;">
+            <button class="link btn border-0 p-0 bg-transparent position-absolute end-0" type="button" (click)="forgotPassword()">Forgot Password?</button>
+          </div>
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <button *ngIf="!fetching" type="submit" class="boxes btn btn-primary text-light " [disabled]="!loginForm.valid" style="background: #0354A6;">Log In</button>
+            <div *ngIf="fetching" class="spinner-border" style="color: #0354A6;" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+        </form>
+        <div class="position-relative">
+          <p>Don't have an account? <button class="link btn border-0 p-0 bg-transparent" type="button" (click)="toSignup()">Sign up</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

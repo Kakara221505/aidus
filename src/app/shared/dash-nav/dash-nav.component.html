@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-light  border-0" style="height: 80px; background-color: #ffffff;">
+  <div class="container">
+    <a  [routerLink]="['/home']" class="btn navbar-brand"><img src="../../assets/AIDUS login signup/Black-BG-1 (Traced).png" width="120" height="36"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="d-flex flex-column justify-content-around" style="height: 24px; width: 24px;">
+        <div style="width: 100%; border: 1px solid #232323; border-radius: 10px; background: #232323;"></div>
+        <div class="ms-auto" style="width: 70%; border: 1px solid #232323; border-radius: 10px; background: #232323;"></div>
+        <div style="width: 100%; border: 1px solid #232323; border-radius: 10px; background: #232323;"></div>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse text-dark" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link " type="button" aria-current="page" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} >Dashboard</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" aria-current="page" href="" routerLink="/dashboard/wallet" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}  >Wallet</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" aria-current="page" routerLink="/dashboard/staking" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}  >Staking</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" aria-current="page" routerLink="/dashboard/history" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} >History</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link" aria-current="page" routerLink="/dashboard/referral" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} >Referral</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ps-5" >
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link" [routerLink]="['/dashboard/profile']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img style="height: 40px; width: 40px;" src="../../../assets/AIDUS DASHBOARD ASSETS/Notification.png">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" routerLink="/dashboard/profile" href=""><img style="height: 40px; width: 40px;" src="../../../assets/AIDUS DASHBOARD ASSETS/Avatar.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+.bg {
+  background: aliceblue;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  height: 700px;
+}
+
+.bg1 {
+  background: white;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 100px; */
+}
+.bg2 {
+  padding: 60px;
+}
+.text1{
+    margin-top: 40px;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="connect==false" class="container">
+    <h1>Connect Metamask</h1>
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p> -->
+    <p>Pay {{amount}} <span class="coin-title">{{coin}}</span> via Metamask</p>
+    <div  class="mt-5" style="text-align: center;">
+        <img src="../../../../assets/AIDUS DASHBOARD ASSETS/logos_metamask-icon.png" alt="">
+    </div>
+    <div class="mt-4" >
+        <button (click)="handleTransferEth()" *ngIf="this.coin=='eth'" type="button" class="btn">Pay Now</button>
+        <button (click)="handleTransferAidus()" *ngIf="this.coin=='aidus'" type="button" class="btn">Pay Now</button>
+        <button (click)="handleTransferUSDT()" *ngIf="this.coin=='usdt'" type="button" class="btn">Pay Now</button>
+    </div>
+</div>
+
+<div *ngIf="connect==true" class="container">
+    <h1> Metamask Connected</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+    <div class="mt-5" style="display:flex; justify-content:space-between;">
+        <span>Address</span>
+        <span>1BvBMSstWqTFn..</span>
+    </div>
+    <button (click)="pay()" type="button" class="pay mt-5">Pay Now </button>
+</div>

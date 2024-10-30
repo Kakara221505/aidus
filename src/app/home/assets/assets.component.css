@@ -1,0 +1,39 @@
+.bg {
+  background: #d6e9f5e4;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  height: 800px;
+  padding: 0px;
+}
+.img1 {
+  width: 557px;
+  height: 546px;
+  margin-top: 100px;
+  margin-left: 126px;
+}
+.image{
+  width: 32.82px;
+  height: 32px
+}
+.text1 {
+  font-size: 56px;
+  width: 602px;
+  font-weight: 600;
+  margin-top: 84px !important;
+  /* margin-left: 10px; */
+}
+.text {
+  margin-top: 47px;
+}
+.text2{
+  font-size: 24px;
+   font-weight: 600;
+    margin-left: 15px
+}
+.text3{
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 50px;
+  color: #807d7d;
+}

@@ -1,0 +1,233 @@
+.dropdown-menu img {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .card-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 134.3%;
+    letter-spacing: 0.02em;
+    color: #3A3A3A;
+  }
+  
+  .form-group {
+    border: 2px solid;
+    border-color: rgba(3, 84, 166, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    width: 40%;
+  }
+  
+  input:focus, button:focus {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .btn {
+    background: #0354A6;
+    height: 56px;
+    width: 54%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.817778px;
+    text-transform: capitalize;
+    color: #EBEBEB;
+  }
+
+  .filter{
+    width: 96px;
+    height: 40px;
+    border-radius: 5px;
+    color: #0354A6;
+    border: 1px solid #0354A6;
+    background-color: white;
+    outline: none;
+    margin-right: 10px;
+  }
+
+  .export{
+    width: 96px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0354A6;
+    border: none;
+    outline: none;
+  }
+  
+  .bg{
+    background-color: white;
+    border-radius: 4px;
+    padding: 40px;
+  }
+
+  h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: #3A3A3A;
+  }
+
+  .input-flex{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #585858;
+    margin-right: 10%;
+    width: 15%;
+  }
+  .box{
+    margin:20px 13% 0px 20%;
+  }
+
+  p{
+    font-size: 20px;
+    color: #3A3A3A    ;
+  }
+
+  span{
+    font-size: 16px;
+    color: #585858    ;
+  }
+  .next{
+    margin-left: 25%;
+  }
+
+  table img {
+    height: 24px;
+    width: 24px;
+  }
+  
+  thead {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 170%;
+    color: #585858;
+    border-bottom: 1px solid rgba(3, 84, 166, 0.5);
+  }
+  
+  tbody th p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160%;
+    color: #2C3131;
+  }
+  
+  tbody th img {
+    margin-right: 8px;
+  }
+  
+  tbody th {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  tbody td {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #424242;
+  }
+  
+  .card {
+    padding: 24px;
+    box-shadow: 0px 4px 3px rgba(16, 24, 40, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 134.3%;
+    letter-spacing: 0.02em;
+    color: #3A3A3A;
+  }
+
+  .dropbtn {
+    background-color: hsl(210, 22%, 96%);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropup content */
+  /* .dropup {
+    position: relative;
+    display: inline-block;
+    border: 2px solid;
+    border-color: rgba(3, 84, 166, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    width: 40%;
+  } */
+  
+  /* Dropup content (Hidden by Default) */
+  /* .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: -100px;
+    background-color: #f1f1f1;
+    min-width: 420px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  } */
+  
+  /* Links inside the dropup */
+  /* .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  } */
+  
+  /* Change color of dropup links on hover */
+  /* .dropup-content a:hover {background-color: #ddd} */
+  
+  /* Show the dropup menu on hover */
+  /* .dropup:hover .dropup-content {
+    display: block;
+  } */
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+  /* .dropup:hover .dropbtn {
+    background-color:  #ddd;
+  } */
+  .add{
+    font-size: 18px;
+    font-weight:bold ;
+    color: #0354A6;
+
+    
+  }
+  .dropdown-item{
+    border-bottom: 2px solid #e8e9ea;
+  }
+  .dropdown-menu1{
+    max-width: 30rem !important;
+    min-width: 0rem !important;
+    margin-left: -23rem !important;
+  }

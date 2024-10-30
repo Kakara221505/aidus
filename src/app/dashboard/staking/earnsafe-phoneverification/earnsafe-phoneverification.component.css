@@ -1,0 +1,38 @@
+.bg {
+  background: #ffffff;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.getOtp{
+  background-color: #0354A6;
+  width: 150px;
+  color: white;
+  border: none;
+  height: 50px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.stake {
+  background: #0354A6;
+  height: 56px;
+  /* margin-left: rem; */
+  width: 100%;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #EBEBEB;
+  /* margin-top: 60px;
+  margin-bottom: 20px; */
+}

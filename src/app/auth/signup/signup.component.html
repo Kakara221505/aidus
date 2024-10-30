@@ -1,0 +1,145 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="row my-5" style="min-height: 540px;">
+    <div class="col-md-6 px-3">
+      <h1
+      style="
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 56px;
+          line-height: 70px;
+          font-feature-settings: 'liga' off;
+          color: #0354A6;">
+        Start & Build your Crypto Portolio here
+      </h1>
+      <p style="margin-top: 24px;">
+        Let your crypto assets work for you. Earn upto 24% annual <br>interet from AIDUS. Deposit your crypto & start earning <br>immediately.
+      </p>
+      <!-- <span style="margin-top: 24px;">
+        Let your crypto assets work for you. Earn upto 12% annual interet <br>from AIDUS. Deposit your crypto & start earning immediately.
+      </span> -->
+
+      <div class="d-flex flex-row" style="margin-top: 25px;">
+        <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+        <h5 style="font-size: 20px;
+        margin-left: 30px;
+        color: #0354A6;">
+         Various investment products</h5>
+      </div>
+
+      <div class="d-flex flex-row" style="margin-top: 25px;">
+        <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+        <h5 style="font-size: 20px;
+        margin-left: 30px;
+        color: #0354A6;">
+        Zero fees</h5>
+      </div>
+
+      <div class="d-flex flex-row" style="margin-top: 25px;">
+        <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+        <h5 style="font-size: 20px;
+        margin-left: 30px;
+        color: #0354A6;">
+        Weekly payout</h5>
+      </div>
+
+      <div class="d-flex flex-row" style="margin-top: 25px;">
+        <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+        <h5 style="font-size: 20px;
+        margin-left: 30px;
+        color: #0354A6;">
+         Withdraw anytime</h5>
+      </div>
+
+      <div class="d-flex flex-row" style="margin-top: 25px;">
+        <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+        <h5 style="font-size: 20px;
+        margin-left: 30px;
+        color: #0354A6;">
+        Disclosure of performance audit report</h5>
+      </div>
+    </div>
+
+  
+   
+    <div class="col-md-6">
+      <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+      <div class="alert alert-success" *ngIf="this.successmessage" >{{this.successmessage}}</div>  
+      <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>     
+      <div class="card p-4 px-5 mx-auto border-0 d-flex flex-column justify-content-around" style="width: 100%; min-height: 484px; border-radius: 10px;">
+        <h2
+          class="card-title"
+          style="font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          display: flex;
+          align-items: center;
+          color: #2C3131;">Sign Up</h2>
+        <form
+          class="d-flex flex-column justify-content-around"
+          style="height: 100%;"
+          (ngSubmit)="onSignup(signupForm)"
+          #signupForm="ngForm"
+        >
+          <div class="form-group">
+            <label for="email" class="input-label">Email Address</label>
+            <input id="email" type="email" name="email" class="form-control boxes" (keyup)="validateEmail(signupForm)" required ngModel>
+          </div>
+          <div *ngIf="emailValidate==false">
+            <p class="text-danger">Please Enter Valid Email Address</p>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="input-label">Password</label>
+            <input id="password" type="password" name="password" class="form-control boxes" required ngModel (keyup)="validatePassword(signupForm)" minlength="6" maxlength="16">
+            <div *ngIf="passwordValidate==false">
+              <!-- <p class="text-danger">You have reached maximum length </p> -->
+            </div>
+          </div>
+
+          <div class="form-group position-relative">
+            <label for="re-password" class="input-label">Re-enter Password</label>
+            <input id="confirm" [type]=" !show ? 'password': 'text' " name="confirm" class="form-control boxes" (keyup)="confirmPassword(signupForm)" required ngModel>
+            <!-- <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" type="button" (click)="onShow()">
+              <img *ngIf="!show" src="../../../assets/AIDUS login signup/Hicon/Outline/Show.png">
+              <img *ngIf="show" src="../../../assets/AIDUS login signup/Hicon/Outline/Hide.png">
+            </button> -->
+            <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="!show"><img style="margin-right: 6px;"  src="../../../assets/AIDUS login signup/Hicon/Outline/Show.png"></button>
+            <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="show"><img style="margin-right: 6px;"  src="../../../assets/AIDUS login signup/Hicon/Outline/Hide.png"></button>
+          </div>
+          <div *ngIf="wrongPassword">
+            <p class="text-danger">THE PASSWORD DOESN'T MATCH</p>
+          </div>
+          <div class="form-group">
+            <label for="referral" class="input-label">Referral Code (optional)</label>
+            <input id="referral" type="string" [(ngModel)]="this.code"  name="referral" class="form-control boxes" ngModel>
+          </div>
+
+          <div class="boxes" style="width: 100%;">
+            <label for="agree">
+              <input id="agree" name="agree" readonly class="m-2" type="checkbox" ngModel required>
+              I agree to the <a href="" class="font-weight-bolder text-decoration-underline" target="_blank" [routerLink]="['/home/terms-condition']" style="color: #0354A6;">Terms of Service</a> and <a href="" class="font-weight-bolder text-decoration-underline" style="color: #0354A6;" target="_blank" [routerLink]="['/home/privacy-policy']">Privacy Policy</a>
+            </label>
+          </div>
+
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <button *ngIf="!fetching" type="submit" class="boxes btn btn-primary text-light " style="background: #0354A6;" [disabled]="!signupForm.valid || emailValidate==false" >Sign Up</button>
+            <div *ngIf="fetching" class="spinner-border" style="color: #0354A6;" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="position-relative mt-3">
+          <span>Already have an account? <button class="link btn border-0 p-0 bg-transparent" type="button" (click)="toLogin()"><span style="font-size: 16px;">Log In</span></button></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

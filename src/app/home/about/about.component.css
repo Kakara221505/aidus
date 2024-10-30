@@ -1,0 +1,63 @@
+.bg {
+    background: #ffffff;
+    /* box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1); */
+    border-radius: 6px;
+    padding: 16px;
+    /* height: 800px; */
+    padding: 0px;
+   
+  }
+  .row{
+    margin-top: 3rem ;
+  }
+  .row1{
+    margin-bottom: 2rem
+  }
+  .text1 {
+    margin-top: 130px;
+    font-size: 56px;
+    font-weight: 600;
+  }
+  .text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .card {
+    padding: 13px;
+    margin-left: 110px;
+    width: 240px;
+    border-color: rgb(211, 231, 245);
+  }
+  .card1 {
+    width: 920px;
+    margin-left: -46px;
+    border-color: rgb(167, 200, 230);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .text2 {
+    width: 47%;
+    text-align: center;
+    margin-top: 21px;
+  }
+  .accordion-button::after {
+    background-image: url("../../../assets/plus.png");
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .accordion-item{
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125)
+  }
+  .accordion{
+    margin-bottom: 180px;
+  }
+  .accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    margin-top: 20px;
+    
+}
+  

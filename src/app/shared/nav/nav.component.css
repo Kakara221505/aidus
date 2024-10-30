@@ -1,0 +1,33 @@
+.nav-link {
+  color: #424242;
+  margin-left: 20px;
+}
+
+.navbar {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+.bg2 {
+  width: 130px;
+  height: 30px;
+margin-left: 10px;
+  background: #9abbdb;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+.bg3 {
+  width: 228px;
+  height: 30px;
+margin-left: 10px;
+  background: #9abbdb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.dropdown-menu[data-bs-popper] {
+  top: 166%;
+  left: -100%;
+  margin-top: 0.125rem;
+}

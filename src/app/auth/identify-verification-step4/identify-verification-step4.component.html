@@ -1,0 +1,93 @@
+<app-auth-nav></app-auth-nav>
+<form [formGroup]="addBroker">
+<div  class="card border-0" style="margin-left: 250px;" >
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      
+      <h3 >Enable Google Authenticator</h3>
+      
+      <img  src="../../../assets/Landing page AIDUS/04.png" style="height: 60px;">
+      <h6 style="font-size: 20px; text-align: center;">Complete the 2 Factor Authentication <br>to proceed further</h6>
+      <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+      <div class="alert alert-danger" style="width:384px" *ngIf="this.message" >{{this.message}}</div> 
+      <!-- <div class="d-flex flex-row" style="justify-content: center;">
+        <div class="d-flex flex-column" style="text-align: center;">
+      <div class="d-flex flex-row" style="justify-content: center;">
+      <h5>3421345676</h5>
+      <img  src="../../../assets/Landing page AIDUS/Copy icon.png" style="height: 20px; width: 20px;">
+      
+    </div>
+      </div>
+ 
+    </div> -->
+    <div >
+
+      <div class="d-flex flex-row" style="justify-content: center;">
+        <div style="margin:21px;margin-right: -60px;">
+        <label>Phone Number Verification</label>
+        <div class="d-flex flex-row">
+       
+        <input
+        type="text"
+        class="form-control"
+        [readonly]='!toggleButton'
+        formControlName="smsOtp"
+        placeholder="Enter the 6-digit Verification code"
+      />
+      <button class="getOtp2" (click)="AddOtp()">Get Otp</button>
+      <button class="resend" (click)="resendPhoneOtp()">Resend</button>
+    </div>
+    </div>
+   
+      </div>
+
+    <div class="d-flex flex-row" style="justify-content: center;">
+      <div style="margin:21px;margin-right: -60px;">
+      <label>Email Address Verification</label>
+      <div class="d-flex flex-row">
+     
+      <input
+      type="text"
+      class="form-control"
+      formControlName="emailOtp"
+      [readonly]='!toggleButton1'
+      placeholder="Enter the 6-digit Verification code"
+    />
+    <button class="getOtp2" (click)="AddOtp1()">Get Otp</button>
+    <button class="resend" (click)="resendEmailOtp()">Resend</button>
+  </div>
+  </div>
+ 
+    </div>
+    <div class="d-flex flex-row" style="justify-content: center;">
+      <div style="width: 92%;">
+      <label>Authenticator Code</label>
+      <div class="d-flex flex-row">
+     
+      <input
+      type="text"
+      class="form-control"
+      formControlName="googleAuthenticatorCode"
+      placeholder="Enter the 6-digit Verification code"
+      style="width: 60%;"
+    />
+   
+  </div>
+  
+  </div>
+ 
+    </div>
+    
+  </div>
+
+  <!-- <h6 style="margin-right: 252px;">Security Verification unavailable</h6> -->
+    <div class="d-flex flex-column" style="text-align: center;">
+        <div class="d-flex flex-row" style="justify-content: center;margin-left: -73px;">
+     <button class="button"  [routerLink]="['/auth/identification-verification-step-2']">Previous</button>
+      <button class="btn btn-primary border-0" (click)="submit()">Continue</button>
+     
+      </div>
+      </div>
+    
+    </div>
+  </div>
+</form>

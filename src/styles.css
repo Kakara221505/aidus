@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+html,body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #F2F4FF;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html, body { height: 100%; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+
+html{
+  overflow-y: hidden !important;
+}
+.select2-container--default .select2-selection--single{
+    height: 56px!important;
+    text-align: center!important;
+    display: flex!important;
+    align-items: center!important;
+    border-color: rgba(3, 84, 166, 0.5)!important;
+    margin-left: 15px!important;
+}
+.select2-container--open .select2-dropdown--below{
+  width:290px!important;
+  margin-left: 15px!important;
+}
+.select2-container--default .select2-selection--single.select2-selection__arrow:before{
+  border-style:none!important;
+  
+}

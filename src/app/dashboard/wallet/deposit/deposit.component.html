@@ -1,0 +1,32 @@
+<div>
+  
+  <div class="d-flex flex-row">
+    <h4 class="card-title">Deposit Crypto</h4>
+    <button class="btn1" style="margin-left: 234px;
+    border: none;
+    background: white; color: #0354A6;" [routerLink]="['/dashboard/wallet']">Back</button>
+   </div>
+ <form (ngSubmit)="depositBy()" #depositCrypto="ngForm">
+  <!-- <div class="form-group">
+    <input type="number" class="form-control border-0" name="amount" readonly [(ngModel)]="amount" >
+    <select (change)="onChange($event)" class="custom-select border-0" id="inputGroupSelect01">
+      <option value="eth" selected><img style="height: 24px; width: 24px;" src="../../../../assets/Landing page AIDUS/eth- Section 3.png"> ETH</option>
+      <option value="bitcoin"><img src="../../../../assets/Landing page AIDUS/btc Section 3.png"> BTC</option>
+      <option value="usdt"><img src="../../../../assets/Landing page AIDUS/USDT Section 3.png"> USDT</option>
+      <option value="aidus"><img src="../../../../assets/Landing page AIDUS/AIDUS Section 3.png"> AIDUS</option>
+    </select>
+
+  </div> -->
+  <div class="form-group">
+             
+    <select   class="form-select" aria-label="Default select example"  (change)="onChange($event)" id="inputGroupSelect01" name="selectOption">
+   
+      <option value="eth"><img style="height: 24px; width: 24px;" src="../../../../assets/Landing page AIDUS/eth- Section 3.png"> ETH</option>
+      <option value="bitcoin"><img src="../../../../assets/Landing page AIDUS/btc Section 3.png"> BTC</option>
+      <option value="usdt"><img src="../../../../assets/Landing page AIDUS/USDT Section 3.png"> USDT</option>
+      <option value="aidus"><img src="../../../../assets/Landing page AIDUS/AIDUS Section 3.png"> AIDUS</option>
+    </select>
+  </div>
+  <button class="btn">Next</button>
+ </form>
+</div>

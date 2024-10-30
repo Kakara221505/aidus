@@ -1,0 +1,182 @@
+.bg {
+  background: #ffffff;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border: none;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  font-size: 16px;
+  color: #585858;
+  font-family: "Poppins";
+}
+
+thead {
+  border-bottom: 2px solid rgba(3, 84, 166, 0.3);
+  transform: rotate(0deg);
+}
+
+h1 {
+  color: #2f333e;
+  font-size: 22px;
+  margin: 20px 0px 30px 0px;
+  width: max-content;
+}
+
+.pending {
+  color: yellow;
+}
+.success {
+  color: green;
+}
+
+.filter {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  color: #0354a6;
+  border: 1px solid #0354a6;
+  background-color: white;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.export {
+  width: 96px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0354a6;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* .bg {
+    background-color: white;
+    border-radius: 4px;
+    padding: 40px;
+  }
+  
+  .dropbtn {
+    background-color: hsl(208, 25%, 90%);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  } */
+
+/* The container <div> - needed to position the dropup content */
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-color: rgba(3, 84, 166, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    width: 40%;
+  } */
+
+/* Dropup content (Hidden by Default) */
+/* .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  } */
+
+/* Links inside the dropup */
+/* .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  } */
+
+/* Change color of dropup links on hover */
+/* .dropup-content a:hover {
+    background-color: white;
+  } */
+
+/* Show the dropup menu on hover */
+/* .dropup:hover .dropup-content {
+    display: block;
+  } */
+
+/* Change the background color of the dropup button when the dropup content is shown */
+/* .dropup:hover .dropbtn {
+    background-color: #2980b9;
+  }
+  .dropdown-center {
+    background-color: white;
+  } */
+.btn-primary-outline {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  color: #0354a6;
+  border: 1px solid #0354a6;
+  background-color: white;
+  outline: none;
+  margin-left: 10px;
+}
+.text1 {
+  font-size: smaller;
+}
+.text2 {
+  font-size: small;
+}
+.dropdown-menu {
+  min-width: 8.5rem;
+}
+.dropdown-menu1 {
+  max-width: 5rem !important;
+  min-width: 6.5rem !important;
+}
+.removeoutline {
+  border: none;
+  background-color: #aac0d3;
+  resize: none;
+  outline: none;
+}
+.card {
+  height: 38px;
+  width: 530px;
+  background-color: #aac0d3;
+}
+.stake1[_ngcontent-thk-c142] {
+  background: white;
+  height: 41px;
+  width: 138px;
+  font-family: "Poppins";
+  font-style: normal;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #0354a6;
+  border-color: #0354a6;
+  margin-left: -6px;
+  font-size: small;
+}

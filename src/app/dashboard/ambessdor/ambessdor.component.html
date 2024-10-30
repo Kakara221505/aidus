@@ -1,0 +1,107 @@
+<div class="container-fluid bg">
+    <div class="container1 d-flex" style="justify-content: space-between">
+      <div class="text">
+        <h1>Earn Extra Income with AIDUS</h1>
+        <div class="d-flex flex-row" style="margin-top: 25px;">
+          <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+          <p style="font-size: 18px;margin-left: 10px">
+          Unlimited commission upon all referred users</p>
+        </div>
+        <div class="d-flex flex-row">
+          <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+          <p style="font-size: 18px;margin-left: 10px">
+         Distribute a certain percentage base on every referee's <br>staking amount</p>
+        </div>
+        <div class="d-flex flex-row">
+          <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+          <p style="font-size: 18px;margin-left: 10px">
+        Monthly Payout</p>
+        </div>
+        <div class="d-flex flex-row">
+          <img src="../../../assets/AIDUS login signup/Checkbox1.png" style="height: 25px; width:25px;">
+          <p style="font-size: 18px;margin-left: 10px">
+       Earn Referral Bonus as the same time</p>
+        </div>
+     
+      </div>
+      <div class="card">
+        <div >
+          <div class="card-body">
+            <p style="font-weight: 500;margin-bottom: 20px;">
+              Use your unique link to invite your friends and family over message
+              or email.
+            </p>
+            <h6 style="color: #0354a6">Referral code</h6>
+            <div class="d-flex" style="margin-bottom: 25px">
+              <input
+                type="text"
+                readonly
+                #formInputText
+                [(ngModel)]="this.referData1.referCode"
+                class="form-control"
+                id="inputPassword2"
+                placeholder="AIDUSUSER1"
+              />
+              <button type="submit" class="btn btn-primary button"  (click)="copyText()">
+               
+                  <img
+                    src="../../../assets/Landing page AIDUS/Copy button.png"
+                    alt=""
+                    style="height: 35px; width: 40px;"
+                  />
+              </button>
+              <p *ngIf="this.message==true" style="color: #0354a6; margin-top: 10px;margin-left: 6px;">
+                Copied
+             </p>
+            </div>
+           
+            <h6 style="color: #0354a6">Referral Link</h6>
+            <div class="d-flex">
+              <input
+                type="text"
+                readonly
+                class="form-control"
+                [(ngModel)]="this.signUuLink1"
+                id="inputPassword2"
+                placeholder="https://samplelink.com"
+              />
+              <button type="submit" class="btn btn-primary button"  (click)="copyText1()">
+               
+                <img
+                  src="../../../assets/Landing page AIDUS/Copy button.png"
+                  alt=""
+                  style="height: 35px; width: 40px;"
+                />
+              </button>
+              <p *ngIf="this.message1==true" style="color: #0354a6; margin-top: 10px;margin-left: 6px;">
+                Copied
+             </p>
+            </div>
+           
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container bg1" >
+    <h3 class="bg3">Your Ambassador Network</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Date Joined</th>
+          <th scope="col">Referred to</th>
+          <th scope="col">Bonus Earned</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let obj of referDataList">
+          <th scope="row">{{obj?.date}}</th>
+          <td>{{obj?.referEmail}}</td>
+          <td>{{obj?.bonusEarned}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>

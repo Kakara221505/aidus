@@ -1,0 +1,24 @@
+<div style="height: 100%;" class="container d-flex flex-row justify-content-center align-items-center">
+  <div class="card border-0 p-5" style="width: 600px; height: 480px;">
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      <div class="text-center">
+        <div class="card-title">Change Password</div>
+        <div class="card-text">Setup your new password</div>
+      </div>
+      <form class="d-flex flex-column justify-content-around" (ngSubmit)="reset(resetPassword)" #resetPassword="ngForm">
+        <div class="form-group">
+          <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>
+          <label for="email" class="mb-3">New password</label>
+          <input id="password" type="password" name="password" class="form-control mb-3 p-3" ngModel required>
+        </div>
+        <div class="form-group position-relative">
+          <label for="password" class="mb-3">Confirm Password</label>
+          <input id="cpassword" [type]="!show ? 'password': 'text'" name="confirm" class="form-control mb-3 p-3" ngModel cpassword required>
+          <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="!show"><img src="../../../../assets/AIDUS login signup/Hicon/Outline/Show.png"></button>
+          <button class="show-btn btn bg-transparent border-0 position-absolute end-0 top-50 p-0 pe-2" (click)="showPassword()" type="button" *ngIf="show"><img src="../../../../assets/AIDUS login signup/Hicon/Outline/Hide.png"></button>
+        </div>
+        <button type="submit" class="btn btn-primary border-0 mb-3 p-3" [disabled]="!resetPassword.valid">Change Password</button>
+      </form>
+    </div>
+  </div>
+</div>

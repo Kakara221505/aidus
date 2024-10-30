@@ -1,0 +1,143 @@
+<app-auth-nav></app-auth-nav>
+<div class="container">
+  <div class="row my-5" style="min-height: 540px;">
+  
+    <div >
+      <div class="card p-4 px-5 mx-auto border-0 d-flex flex-column justify-content-around" style="width: 100%; border-radius: 10px;">
+        <h2 style="text-align: center;">Personal Information</h2>
+        <form [formGroup]="documentForm">
+          <app-loading *ngIf="fetching">{{fetching}}</app-loading>
+          <div class="d-flex flex-row" style="margin-left: 70px;">
+       
+          <div class="form-group" >
+            <label for="email" class="input-label">First Name</label>
+            <input id="email" formControlName="firstName" type="text" name="email" class="form-control boxes"  [(ngModel)]="data.firstName">
+            <div class="mt-2" *ngIf="f['firstName'].touched && f['firstName'].invalid">
+              <p *ngIf="f['firstName'].errors && f['firstName'].errors['required']" style="color: red;">
+                First name is required
+              </p>
+
+            </div>
+          </div>
+          
+         
+            <div class="form-group" style="margin-left: 405px;">
+              <label for="email" class="input-label">Middle Name(optional)</label>
+              <input id="email" type="text"  formControlName="middlName" name="email" class="form-control boxes1"  [(ngModel)]="data.middlName">
+            </div>
+            
+        </div>
+        <div class="d-flex flex-row" style="margin-left: 70px;">
+       
+            <div class="form-group">
+              <label for="email" class="input-label">Last Name</label>
+              <input id="email" type="text" formControlName="lastName" name="email" class="form-control boxes" [(ngModel)]="data.lastName">
+              <div class="mt-2" *ngIf="f['lastName'].touched && f['lastName'].invalid">
+                <p *ngIf="f['lastName'].errors && f['lastName'].errors['required']" style="color: red;">
+                  Last Name name is required
+                </p>
+  
+              </div>
+            </div>
+            
+           
+              <div class="form-group" style="margin-left:405px">
+                <label for="email" class="input-label">Address</label>
+                <input id="email" type="text" formControlName="address" name="email" class="form-control boxes1"  [(ngModel)]="data.address">
+                <div class="mt-2" *ngIf="f['address'].touched && f['address'].invalid">
+                  <p *ngIf="f['address'].errors && f['address'].errors['required']" style="color: red;">
+                    Address name is required
+                  </p>
+    
+                </div>
+              </div>
+              
+          </div>
+          <div class="d-flex flex-row" style="margin-left: 70px;">
+       
+            <div class="form-group">
+              <label for="email" class="input-label">City</label>
+              <input id="email" type="text" formControlName="city" name="email" class="form-control boxes" [(ngModel)]="data.city">
+              <!-- <div class="mt-2" *ngIf="f['city'].touched && f['city'].invalid">
+                <p *ngIf="f['city'].errors && f['city'].errors['required']" style="color: red;">
+                  City name is required
+                </p>
+  
+              </div> -->
+            </div>
+            
+           
+              <div class="form-group" style="margin-left:405px">
+                <label for="email" class="input-label">Country of Residence</label>
+                <input id="email" type="text" formControlName="country" name="email" class="form-control boxes1" [(ngModel)]="data.country">
+                <!-- <div class="mt-2" *ngIf="f['country'].touched && f['country'].invalid">
+                  <p *ngIf="f['country'].errors && f['country'].errors['required']" style="color: red;">
+                    Country name is required
+                  </p>
+    
+                </div> -->
+              </div>
+              
+          </div>
+
+          <div class="d-flex flex-row" style="margin-left: 70px;">
+       
+            <div class="form-group">
+              <label for="email"  class="input-label">Postal Code(optional)</label>
+              <input id="email" type="number" formControlName="documentId" name="email" class="form-control boxes">
+            </div>
+            
+           
+              <div class="form-group" style="margin-left:405px">
+                <label for="email" class="input-label">Phone Number</label>
+                <div class="d-flex flex-row" >
+                  <select2
+                  
+                  [data]="data1"
+                  style="width:90px"
+                  [value]="value1"
+                  formControlName="countryCode"
+                   (update)="update('value1', $event)"
+                 (change)="change('change1', $event)"
+                 (search)="search('search1')"
+               resettable
+               class="phone"
+                 id="selec2-1">
+                   </select2>
+                <!-- <select class="form-select" id="inputGroupSelect01" name="selectOption" style="width: 84px; border-color: #0354A6;;" formControlName="countryCode" (change)="addAddress($event)">
+                  <option value="82" >+82/ROK </option>
+                  <option  *ngFor="let address of addressList" [value]="address.ISD">+{{address.ISD}}/{{address.CODE1}}</option>
+                </select> -->
+                <!-- <select2  [data]="addressList" [value]="address.ISD"  (update)="addAddress($event)">+{{address.ISD}}/{{address.CODE1}} </select2> -->
+              
+                <input id="email" type="number" min="6" maxlength="15" formControlName="mobileNo" name="email" class="form-control boxes1" style="width: 375px;
+                margin-left: 9px;" [(ngModel)]="data.mobileNo">
+              </div>
+                <div class="mt-2" *ngIf="f['mobileNo'].touched">
+                  <!-- <p  *ngIf="f['mobileNo'].value.length == 15">mhgjk</p> -->
+                  <p *ngIf="f['mobileNo'].errors && f['mobileNo'].errors['required']" style="color: red;">
+                     Mobile Number is required
+                  </p>
+    
+                
+              </div>
+              </div>
+
+              
+              
+          </div>
+     
+            
+           
+            
+        
+          <div class="d-flex flex-row justify-content-center align-items-center">
+            <button  type="submit" class="boxes btn btn-primary text-light " [disabled]="documentForm.invalid" (click)="postPersonalDocument()" style="background: #0354A6; width: 35%;">Continue</button>
+          
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,81 @@
+.bg {
+  background: aliceblue;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 60px;
+}
+.text1 {
+  padding-top: 100px;
+  padding-left: 275px;
+}
+.text2 {
+  width: 1180px;
+  margin-left: 155px;
+  margin-top: 45px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.bg0{
+    padding-left: 40px;
+}
+.bg1 {
+  background-color: white;
+}
+.bg2 {
+  padding-bottom: 40px;
+}
+.bg3 {
+  background-color: aliceblue;
+  padding: 75px;
+  padding-left: 140px;
+}
+.back1 {
+  background-image: url("../../../assets/Security/transprancyimg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 472px;
+  width: 1216px;
+}
+.btn1 {
+  background-color: #0354A6;
+  width: 425px;
+  height: 56px;
+}
+.btn2 {
+  background-color: white;
+  width: 425px;
+  height: 46px;
+  margin-left: 45px;
+}
+.bg4 {
+  background-color: aliceblue;
+  padding-top: 80px;
+}
+.bg5 {
+  /* background-image: url("../../../assets/Security/transprancyimg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain; */
+  background: #ffffff;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #0354a6;
+  box-shadow: 0px 6.48185px 4.86139px rgba(16, 24, 40, 0.1);
+  border-radius: 12px;
+  width: 1216px;
+  /* height: 525px; */
+  margin-top: 55px;
+  margin-bottom: 70px;
+}
+.tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: none;
+    border-width: 0;
+}
+.table>:not(caption)>*>* {
+    padding: 1.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+

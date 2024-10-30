@@ -1,0 +1,347 @@
+<div class="container">
+  <div class="row" style="height: 700px">
+    <div class="col-md-8">
+      <div
+        class="row d-flex flex-column justify-content-between"
+        style="height: 100%"
+      >
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item bg6">
+            <h2 class="accordion-header" id="headingOne">
+              <div class="col-md-12">
+                <div class="p-4 position-relative">
+                  <div class="d-flex" style="margin-bottom: 23px">
+                    <h3>Your Funds</h3>
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls=""
+                    >
+                      Show more
+                    </button>
+                  </div>
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Wallet Balance</th>
+                        <th scope="col">Staked Amount</th>
+                        <th scope="col">Total Asset Value</th>
+                        <th scope="col">
+                          Interest Earned<span>(All Time)</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="funds">
+                          {{ depositData?.totalBalance.substring(0, 13) }}
+                        </td>
+                        <td class="funds">${{ depositData?.stakedAmount }}</td>
+                        <td class="funds">
+                          ${{ depositData?.totalAssetsValue.substring(0, 13) }}
+                        </td>
+                        <td class="funds">
+                          ${{ depositData?.totalStakedInterest | number }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button
+                        class="btn p-2"
+                        style="height: 56px"
+                        type="button"
+                        [routerLink]="['/dashboard/wallet']"
+                      >
+                        Add Funds
+                      </button>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        class="btn p-2"
+                        style="height: 56px"
+                        type="button"
+                        [routerLink]="['/dashboard/staking']"
+                      >
+                        Stake Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body bg6">
+                <div class="border-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Asset Type</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Staked Amount</th>
+                        <th scope="col">Interest Earned</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <img
+                            src="../../../assets/Landing page AIDUS/AIDUS Section 3.png"
+                            alt="aidus token image"
+                          />
+                          <p>AIDUS</p>
+                        </th>
+                        <td>
+                          {{ depositData?.aidusBalance.substring(0, 13) }} AIDUS
+                          <p></p>
+                        </td>
+                        <td>{{ depositData?.aidusStakedAmount }}</td>
+                        <td>
+                          <img
+                            src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                            alt=""
+                            style="margin-right: 3px"
+                          />
+                          {{ depositData?.aidusInterestEarned | number }}%
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <img
+                            src="../../../assets/Landing page AIDUS/btc Section 3.png"
+                            alt="btc image"
+                          />
+                          <p>Bitcoin</p>
+                        </th>
+                        <td>
+                          {{ depositData?.bitcoinBalance.substring(0, 13) }} BTC
+                          <p></p>
+                        </td>
+                        <td>{{ depositData?.bitcoinStakedAmount }}</td>
+                        <td>
+                          <img
+                            src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                            alt=""
+                            style="margin-right: 5px"
+                          />{{ depositData?.bitcoinInterestEarned | number }}%
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <img
+                            src="../../../assets/Landing page AIDUS/eth- Section 3.png"
+                            alt="Eth token image"
+                          />
+                          <p>Ethereum</p>
+                        </th>
+                        <td>
+                          {{ depositData?.ethBalance.substring(0, 13) }} ETH
+                          <p></p>
+                        </td>
+                        <td>{{ depositData?.ethStakedAmount }}</td>
+                        <td>
+                          <img
+                            src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                            alt=""
+                            style="margin-right: 5px"
+                          />{{ depositData?.ethInterestEarned | number }}%
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <img
+                            src="../../../assets/Landing page AIDUS/USDT Section 3.png"
+                            alt="USDT image"
+                          />
+                          <p>USDT</p>
+                        </th>
+                        <td>
+                          {{ depositData?.usdtBalance.substring(0, 13) }} USDT
+                          <p></p>
+                        </td>
+                        <td>{{ depositData?.usdtStakedAmount }}</td>
+                        <td>
+                          <img
+                            src="../../../assets/AIDUS wallet assets/Iconly/Light/Arrow - Up Square.png"
+                            alt=""
+                            style="margin-right: 5px"
+                          />{{ depositData?.usdtInterestEarned | number }}%
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-12"><div class="card p-4 position-relative">
+          <h3 class="card-title">Your Funds</h3>
+      
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">Wallet Balance</th>
+                <th scope="col">Staked Amount</th>
+                <th scope="col">Total Asset Value</th>
+                <th scope="col">Interest Earned<span>(All Time)</span></th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                <td class="funds">{{depositData?.totalBalance}}</td>
+                <td class="funds">${{depositData?.stakedAmount}}</td>
+                <td class="funds">${{depositData?.totalAssetsValue}}</td>
+                <td class="funds">${{depositData?.totalStakedInterest|number}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn p-2" style="height: 56px;" type="button" [routerLink]="['/dashboard/wallet']">Add Funds</button>
+            </div>
+            <div class="col-md-6">
+              <button class="btn p-2"  type="button" [routerLink]="['/dashboard/staking']">Stake Now</button>
+            </div>
+          </div>
+        </div></div> -->
+        <div class="col-md-12" style="margin-bottom: 20px;">
+          <div class="card p-4 position-relative">
+            <h3 class="card-title">Total Asset Value</h3>
+            <div class="dropdown position-absolute end-0 me-3">
+              <button
+                class="btn btn1 dropdown-toggle border-0"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="margin-left: -22px"
+              >
+                <span style="margin-right: 30px">Filter</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a
+                  class="dropdown-item"
+                  (click)="getAssetGraph((this.day = '1'))"
+                  >Last day</a
+                >
+                <a
+                  class="dropdown-item"
+                  (click)="getAssetGraph((this.day = '7'))"
+                  >Last 7 days</a
+                >
+                <a
+                  class="dropdown-item"
+                  (click)="getAssetGraph((this.day = '30'))"
+                  >Last 30 days</a
+                >
+                <a
+                  class="dropdown-item"
+                  (click)="getAssetGraph((this.day = '90'))"
+                  >Last quarter</a
+                >
+                <!-- <a class="dropdown-item" (click)="getAssetGraph(this.day='360')">Last year</a> -->
+                <!-- <a class="dropdown-item">+ Custom date</a> -->
+              </div>
+            </div>
+            <div class="card-body mx-auto">
+              <div height="500" width="500">
+                <canvas id="MyChart" height="350vh" width="690vw">{{
+                  chart
+                }}</canvas>
+              </div>
+              <!-- <div class="p-3">
+                <img
+                  src="../../assets/AIDUS DASHBOARD ASSETS/Line chart.png"
+                  style="width: 95%; height: 200px"
+                />
+              </div> -->
+              <!-- <div id="chart" > 
+                <apx-chart
+                  [series]="chartOptions.series"
+                  [chart]="chartOptions.chart"
+                  [xaxis]="chartOptions.xaxis"
+                  [dataLabels]="chartOptions.dataLabels"
+                  [grid]="chartOptions.grid"
+                  [stroke]="chartOptions.stroke"
+                  [title]="chartOptions.title"
+                ></apx-chart>
+              </div> -->
+              <div>
+                <img
+                  src="../../assets/AIDUS DASHBOARD ASSETS/Indicator.png"
+                  style="width: 20px; height: 20px"
+                  alt=""
+                />
+                USD
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-bottom: 20px;">
+      <div class="card p-4" style="height: 100%">
+        <h3 class="">Exchange Rates</h3>
+        <div class="card-body">
+          <table class="table table-borderless mb-5">
+            <thead>
+              <tr class="mb-2">
+                <th scope="col">Pairs</th>
+                <th scope="col">Price</th>
+                <th scope="col">24H Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <app-loader *ngIf="fetching">{{ fetching }}</app-loader>
+              <tr>
+                <td>BTC/USD</td>
+                <!-- <td>{{ this.depositData2?.usd | number }}</td> -->
+                <td>{{ this.bitcoinPrice }}</td>
+                <td>{{ this.bitcoin }}</td>
+              </tr>
+              <tr>
+                <td>ETH/USD</td>
+                <!-- <td>{{ this.depositData1?.usd | number }}</td> -->
+                <td>{{ this.ethPrice }}</td>
+                <td>{{ this.eth }}</td>
+              </tr>
+              <tr>
+                <td>USDT/USD</td>
+                <!-- <td>{{ this.depositData3?.usd | number }}</td> -->
+                <td>{{ this.usdtPrice }}</td>
+                <td>{{ this.usdt }}</td>
+              </tr>
+              <tr>
+                <td>AIDUS/USD</td>
+                <!-- <td>40,995.60</td> -->
+                <td>{{ this.aidusPrice }}</td>
+                <td>{{ this.aidus }}</td>
+                <!-- class="dchange" -->
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex flex-row justify-content-between">
+            <h4>Source:</h4>
+            <p>CoinMarketCoin</p>
+          </div>
+          <div class="d-flex flex-row justify-content-between">
+            <h4>Updated Time:</h4>
+            <p>1 minute ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

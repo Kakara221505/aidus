@@ -1,0 +1,145 @@
+
+<div class="container bg">
+    <div>
+      <h1>Summary</h1>
+      <P
+        >The easiest way to grow the quantity of your crypto. Stake BTC,ETH or
+        USDT. Earn the highest earn rates in the market.</P
+      >
+    </div>
+    <div style="display: flex; margin-top: 2rem" class="row">
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Product Name</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.assets?.productName}}</span
+          >
+        </div>
+        <br />
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Token</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.coins?.coin}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Name</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.assets?.productName}}</span
+          >
+        </div>
+        <br />
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Locked Amount <br> Limitation</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >Minimum:{{earnData?.minLimit}} {{earnData?.coins?.coin}}<br />Maximum:{{earnData?.maxLimit}} {{earnData?.coins?.coin}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Staking Period</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.stakingPeriod}} days</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>APR:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.apr}}%</span
+          ><br />
+          <!-- <span style="color: #585858; font-size: 14px; font-weight: 350"
+            >The Yield rate during 90 days lock up period:2.95%</span
+          > -->
+        </div>
+      </div>
+      <div class="row" style="margin-top: 1rem">
+        <div class="col-md-2"><h6>Rating Progress</h6></div>
+        <div class="col-md">
+          <div class="progress">
+            <div class="progress-bar" style="width: 100%">77.62%</div>
+          </div>
+          <span style="color: #585858; font-size: 18px; font-weight: 400"
+            >976.200ETH/1,000,000 ETH<span
+              style="color: #0354a6; font-size: 18px; font-weight: 500; margin-left: 750px;"
+              >97.62%</span
+            ></span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Lock-up Amount:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{party.amount}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Interest Distribution <br>Cycle:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"  *ngIf="earnData?.interestDistCycle==1">Daily</span>
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"  *ngIf="earnData?.interestDistCycle==7">Weekly</span>
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500" *ngIf="earnData?.interestDistCycle==15">BiWeekly</span>
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500" *ngIf="earnData?.interestDistCycle==30">Monthly</span>
+          
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Start Date:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.startDate}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>End Date:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.endDate}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"><h6>Maturity Date:</h6></div>
+        <div class="col-md">
+          <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+            >{{earnData?.maturityDate | date: "dd-MM-YYYY"}}</span
+          >
+        </div>
+      </div>
+      <div style="display: flex; margin-top: 1rem">
+        <div class="col-md-2"></div>
+        <div class="form-check" >
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            [(ngModel)]="chkAcceptTerms"
+            id="defaultCheck1"
+          />
+          <label class="form-check-label" for="defaultCheck1" >
+            I have read and  agree to the
+            <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+              >{{earnData?.coins?.coin}} Staking Service Agreement</span
+            >
+          </label>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-top: 2rem">
+      <button type="button" class="btn stake" style="width: 35%" [disabled]="!chkAcceptTerms"  (click)="earnSafeSummary(earnData.id)">
+        Stake Now
+      </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,135 @@
+.bg {
+  background: #ffffff;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 25px;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border: none;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  font-size: 16px;
+  color: #585858;
+  font-family: "Poppins";
+}
+
+thead {
+  border-bottom: 2px solid rgba(3, 84, 166, 0.3);
+  transform: rotate(0deg);
+}
+
+h1 {
+  color: #2f333e;
+  font-size: 22px;
+  margin: 20px 0px 30px 0px;
+  width: max-content;
+}
+
+.pending {
+  color: #858545;
+}
+.success {
+  color: green;
+}
+
+.filter {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  color: #0354a6;
+  border: 1px solid #0354a6;
+  background-color: white;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.export {
+  width: 96px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0354a6;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.btn-primary-outline {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  color: #0354a6;
+  border: 1px solid #0354a6;
+  background-color: white;
+  outline: none;
+  margin-left: 10px;
+}
+.text1 {
+  font-size: smaller;
+}
+.text2 {
+  font-size: small;
+}
+.dropdown-menu {
+  min-width: 8.5rem;
+}
+.dropdown-menu1 {
+  max-width: 5rem !important;
+  min-width: 6.5rem !important;
+}
+.removeoutline {
+  border: none;
+  background-color: #aac0d3;
+  resize: none;
+  outline: none;
+}
+.card {
+  height: 38px;
+  width: 530px;
+  background-color: #aac0d3;
+}
+
+.stake1 {
+  background: white;
+  height: 41px;
+  width: 138px;
+  font-family: "Poppins";
+  font-style: normal;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.817778px;
+  text-transform: capitalize;
+  color: #0354a6;
+  border-color: #0354a6;
+  margin-left: -6px;
+  font-size: small;
+}
+.active {
+  color: #0354a6;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: 500;
+  text-align: -internal-center;
+}
+.table > :not(:first-child) {
+  border-top: 2px solid #c2e1ff;
+}
+body {
+  overflow-y: clip !important;
+}

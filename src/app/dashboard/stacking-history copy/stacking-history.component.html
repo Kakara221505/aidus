@@ -1,0 +1,263 @@
+<div class="container bg" style="max-width: 1465;">
+    <div style="display: flex; justify-content: space-between">
+      <h1>Staking Interest  History</h1>
+      
+      <div style="display: flex; margin-left: 443px">
+        <!-- <button type="button" class="filter mr-3">Sort By</button> -->
+        <div class="dropdown">
+          <button
+            class="btn filter dropdown-toggle me-1"
+            style="height: 40px"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort
+          </button>
+          <form class="dropdown-menu">
+            <div class="mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Newest to Oldest
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Oldest to Newest
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn filter dropdown-toggle me-1"
+            style="height: 40px"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filter
+          </button>
+          <form class="dropdown-menu">
+            <div class="mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Last day
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Last 7 days
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Last 30 days
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Last quarter
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  Last year
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label text1" for="dropdownCheck2">
+                  + Custome Date
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- <button type="button" class="export ml-3">export</button>   -->
+        <div class="dropdown-menu1">
+          <button
+            class="btn export dropdown-toggle me-1"
+            style="height: 40px"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            (click)="stakHistroyPdf()"
+          >
+            Export
+          </button>
+          <!-- <form class="dropdown-menu">
+            <div class="row" style="margin-left: 5px; margin-right: 5px; width: 400px">
+             
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    Last 24 hours
+                  </label>
+                </div>
+            
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    Last 1 weeks
+                  </label>
+                </div>
+
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    Last 2 weeks
+                  </label>
+                </div>
+           
+              <br />
+            
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    Past Month
+                  </label>
+                </div>
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    past 3 manths
+                  </label>
+                </div>
+                <div class="form-check col-md-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label text1" for="dropdownCheck2">
+                    Past 6 months
+                  </label>
+                </div>
+             
+              <div class="card" style="align-items: center; margin-top: 10px;">
+                <div class="date" style="margin-right: 2rem; margin-top:7px ;">
+                  <input type="date" [(ngModel)]="date" class="removeoutline" />
+                  <input type="date" [(ngModel)]="date1" class="removeoutline" />
+                </div>
+              </div> 
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 15px;">
+                <button type="button" class="btn btn-outline-primary">Cancel</button>
+                <button class="btn btn-primary" type="button" (click)="stakHistroyPdf()">Export</button>
+              </div>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </div>
+    <div>
+      <table class="table" style="table-layout: fixed; width: 100%">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Product</th>
+            <th scope="col">Coin</th>
+            <!-- <th scope="col">Address</th> -->
+            <th scope="col">Maturity Date</th>
+            <th scope="col">Distribution Cycle</th>
+            <th scope="col">Intrest Earned</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let obj of user| paginate: {itemsPerPage: this.filterObj.limit, currentPage: this.filterObj.p,totalItems: copyArr }">
+            <td>{{ obj.date | date: "dd/MM/YYYY" }}</td>
+            <td> {{ obj.time.substring(0,8)}}</td>
+            <td>{{ obj.productName }}</td>
+            <td>{{ obj.coin.toUpperCase() }}</td>
+            <td>{{ obj.maturityDate | date: "dd/MM/YYYY" }}</td>
+            <!-- <td >{{obj.address}}</td> -->
+            <td>{{ obj.earningDays }}</td>
+            <td>{{ obj.interest.toFixed(8)}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls
+        (pageChange)="pageChangeEvent($event)"
+      ></pagination-controls>
+    </div>
+  
+  
+   
+  </div>
+  

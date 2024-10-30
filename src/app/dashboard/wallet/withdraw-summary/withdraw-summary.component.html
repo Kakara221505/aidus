@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="container bg">
+        <h1>Review request details</h1>
+        <!-- <app-loader *ngIf="fetching">{{fetching}}</app-loader>
+        <div class="alert alert-success" *ngIf="this.successmessage" >{{this.successmessage}}</div>  
+        <div class="alert alert-danger" *ngIf="this.message" >{{this.message}}</div>     -->
+        <form class="mt-5"  >
+            <div class="input-flex" *ngIf="this.coinList.coin =='ETH'">
+            <label>Coin</label>
+            <span class="amt-span"> <img src="../../../assets/Landing page AIDUS/eth- Section 3.png" height="20px" width="20px" class="amt-img"/></span> <h6>{{coinList?.coin}}</h6>
+            </div>
+            <div class="input-flex"  *ngIf="this.coinList.coin =='AIDUS'">
+                <label>Coin</label>
+                <span class="amt-span"> <img src="../../../assets/Landing page AIDUS/AIDUS Section 3.png" height="20px" width="20px" class="amt-img"/></span> <h6>{{coinList?.coin}}</h6>
+                </div>
+            <div class="input-flex" *ngIf="this.coinList.coin =='USDT'">
+                <label>Coin</label>
+                <span class="amt-span"> <img src="../../../assets/Landing page AIDUS/USDT Section 3.png" height="20px" width="20px" class="amt-img"/></span> <h6>{{coinList?.coin}}</h6>
+            </div>
+            <div class="input-flex"  *ngIf="this.coinList.coin =='BITCOIN'">
+                <label>Coin</label>
+                <span class="amt-span"> <img src="../../../assets/Landing page AIDUS/btc Section 3.png" height="20px" width="20px" class="amt-img"/></span> <h6>{{coinList?.coin}}</h6>
+            </div>
+
+
+            <div class="input-flex">
+                <label>Withdrawal To</label>
+                 <h6>{{coinList?.addressName}}-{{coinList?.address}}</h6>
+                </div>
+
+                
+            <div class="input-flex">
+                <label>Amount</label>
+                 <h6>{{this.party.amount}}</h6>
+                </div>
+          
+                <div style="display: flex; margin-top: 1rem">
+                    <div class="col-md-2"></div>
+                    <div class="form-check" style="margin-left:38px">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        [(ngModel)]="chkAcceptTerms"
+                        [ngModelOptions]="{standalone: true}"
+                        id="defaultCheck1"
+                      />
+                      <label class="form-check-label" for="defaultCheck1" style="display:inline; margin-right:0px;">
+                        I have read and  agree to the
+                        <span style="color: #0354a6; font-size: 18px; font-weight: 500"
+                          >Staking Service Agreement</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                <div class="next" style="margin-bottom: 119px;">
+                    <button type="submit" class="btn" style="margin-top: 28px;" [disabled]="!chkAcceptTerms" [routerLink]="['/dashboard/withdrawal-verification']">Next</button>
+                </div>
+        </form>
+    </div>
+</div>
+   

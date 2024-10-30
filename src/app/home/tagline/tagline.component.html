@@ -1,0 +1,33 @@
+<div class="container-fluid bg">
+  <div class="d-flex justify-content-center align-items-center">
+    <span class="text1">Subscribe to our newsletter</span>
+  </div>
+  <span class="text2">Stay ahead with the latest updates from AIDUS</span>
+  <div class="head">
+    <form [formGroup]="addBroker">
+      <div class="mb-3">
+        <input type="text" class="form-control"  formControlName="name" placeholder="Your Name" />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email Address"
+          formControlName="email"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div class="mt-2" *ngIf="f['email'].touched && f['email'].invalid">
+          <p *ngIf="f['email'].errors && f['email'].errors['email']" class="validation">
+            Please Enter Valid Email Address
+          </p>
+
+        </div>
+        <p *ngIf="this.data" class="validation1">
+         {{this.data}}
+        </p>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="submit()" [disabled]="addBroker.invalid">Subscribe ></button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+div {
+  font-family: 'Manrope';
+  font-style: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-headings {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+/* .social-icons > a {
+  margin-right: 18.5px;
+  font-size: 20px;
+} */
+.p {
+  margin-top: 0px;
+  margin-bottom: 6rem;
+}

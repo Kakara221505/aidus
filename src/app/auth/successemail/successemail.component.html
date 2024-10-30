@@ -1,0 +1,30 @@
+<app-auth-nav></app-auth-nav>
+<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+<div *ngIf="verify" class="card border-0">
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      <img type="image/png" style="height: 120px; width: 120px;" src="../../../assets/AIDUS-email/Group 13670.png">
+      <h2 class="card-title">Email Verified</h2>
+      <p class="card-text">Thank you, your email has been verified. Your account is now active.</p>
+      <button class="btn btn-primary border-0" (click)="sendNext()">Continue</button>
+    </div>
+  </div>
+
+  <div  class="card border-0" *ngIf="expire">
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      <img type="image/png" style="height: 120px; width: 120px;" src="../../../assets/AIDUS-email/Group 13668.png">
+      <h2 class="card-title">Email Allready Verified</h2>
+     
+      <button class="btn btn-primary border-0" (click)="sendNext1()">Continue</button>
+    </div>
+  </div>
+  <div  class="card border-0" *ngIf="identify" >
+    <div class="card-body d-flex flex-column justify-content-around align-items-center">
+      
+      <h4 >Identity Verification</h4>
+      <h5 >A Few More Steps</h5>
+      <p class="card-text">This is a identify verification process to verify you and make sure all your information are correct.Get yourself verified now and start earning rewards</p>
+      <button class="btn btn-primary border-0" [routerLink]="['/auth//personal-information']">Start Verification Process</button>
+      <button class="btn1" (click)="route()">Skip For Now</button>
+    </div>
+  </div>
+</div>

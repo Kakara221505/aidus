@@ -1,0 +1,657 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="bg">
+        <a href="#personal" class="details"
+          ><h6 class="space">Personal Detail</h6></a
+        >
+        <a href="#ambassador" class="details"
+          ><h6 class="space">Apply as Ambassador</h6></a
+        >
+        <a href="#identity" class="details"
+          ><h6 class="space">Identity Verification</h6></a
+        >
+        <a href="#address" class="details">
+          <h6 class="space">Address Book</h6></a
+        >
+        <a href="#security" class="details">
+          <h6 class="space">Security</h6></a
+        >
+      </div>
+      <!-- <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">Presonal Detail</a>
+        <a href="#" class="list-group-item list-group-item-action">Apply as Ambassador</a>
+        <a href="#" class="list-group-item list-group-item-action">Identity Verification</a>
+        <a href="#" class="list-group-item list-group-item-action">Address Book</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Security</a>
+      </div> -->
+    </div>
+    <div class="col-md bg"   style="margin-left: 2rem">
+      <h3 style="margin-left: 1rem">Personal Details</h3>
+      <!-- <form> -->
+      <div class="form-group row" style="margin-top: 2rem" id="personal">
+        <div
+          class="col-sm-11"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+          "
+        >
+          <div class="d-flex flex-column">
+            <p>First Name</p>
+            <input
+              type="Name"
+              class="form-control"
+              id="inputName"
+              readonly
+              placeholder="Name"
+              style="width: 330px"
+              [(ngModel)]="data.firstName"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <p>Last Name</p>
+            <input
+              type="Surname"
+              class="form-control"
+              style="margin-left: 0px; width: 330px"
+              id="inputSurname"
+              readonly
+              placeholder="Surname"
+              [(ngModel)]="data.lastName"
+            />
+          </div>
+        </div>
+        <div
+          class="col-sm-11"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+          "
+        >
+          <div class="d-flex flex-column">
+            <p>Email</p>
+            <input
+              type="user@gmail.com"
+              class="form-control"
+              id="inputName"
+              readonly
+              style="width: 330px"
+              placeholder="user@gmail.com"
+              [(ngModel)]="data.email"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <p>Mobile No.</p>
+            <input
+              type="Mobile"
+              class="form-control"
+              style="margin-left: 0px; width: 330px"
+              id="inputMobile"
+              readonly
+              placeholder="Mobile"
+              [(ngModel)]="data.mobileNo"
+            />
+          </div>
+        </div>
+        <div
+          class="col-sm-11"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+          "
+        >
+          <div class="d-flex flex-column">
+            <p>Country</p>
+            <input
+              type="Country"
+              class="form-control"
+              id="inputName"
+              placeholder="Country"
+              style="width: 330px"
+              readonly
+              [(ngModel)]="data.country"
+            />
+          </div>
+          <!-- <div class="d-flex flex-column">
+          <div class="dropdown dropdown1">
+            <a
+              class="btn btn-secondary dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="margin-left: 0px;width: 330px;"
+            >
+              Currency Preference
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div> -->
+        </div>
+        <!-- </form> -->
+      </div>
+      <div id="ambassador" *ngIf="data.ambassadorDetails == false">
+        <h4 style="margin-left: 1rem">Apply as Ambassador</h4>
+        <div class="card card1">
+          <div class="card-body">
+            <span style="font-size: 1.5rem"
+              >Apply as an ambassador now and earn exciting rewards. Fill up the
+              form to get started.</span
+            >
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              style="
+                width: 271px;
+                margin-left: 230px;
+                float: right;
+                margin-top: 2rem;
+                background-color: #0354a6;
+              "
+             
+
+
+            >
+            <a href="https://forms.gle/y49Hivq4kz8yyacPA" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:white"> Apply Now</a>
+             
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        style="margin-top: 2rem; margin-left: 1rem; margin-right: 1rem"
+        id="identity"
+      >
+        <h3>Identity Verification</h3>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+          "
+        >
+          <div class="card" style="width: 18rem">
+            <div class="card-body card-body1">
+              <h4 class="card-title" style="font-size: 21px; text-align: center;">Verify Email</h4>
+              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+              <p class="card-text" style="font-size: 14px"  *ngIf="data.emailVerified == false">
+                You need to verify your email id
+              </p>
+              <p class="card-text" style="font-size: 14px"  *ngIf="data.emailVerified == true">
+                Your email has been successfully verified
+              </p>
+              <div
+                *ngIf="data.emailVerified == false"
+                class="d-grid gap-2 d-md-block"
+                style="margin-left: 53px; margin-top: 27px"
+              >
+                <!-- <button class="btn btn-primary" type="button">Verify Now</button> -->
+                <button
+                  type="button"
+                  style="background-color: #0354a6"
+                  class="btn btn-primary btn-lg"
+                  [routerLink]="['/auth/verify']"
+                >
+                  Verify Now
+                </button>
+              </div>
+              <div
+                class="d-flex flex-row"
+                *ngIf="data.emailVerified == true"
+                style="margin-top: 7px"
+              >
+                <img
+                  src="../../../assets/Landing page AIDUS/vector tick.png"
+                  alt=""
+                  style="height: 15px; width: 17px; margin-top: 4px;margin-left: 65px;"
+                />
+                <p style="font-size: 18px; color: #57e257; margin-left: 15px">
+                  Verified
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <div class="card-body card-body1">
+              <h4 class="card-title" style="font-size: 21px; text-align: center;">Personal Info</h4>
+              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+              <p class="card-text" style="font-size: 14px">
+                Submit your personal information and add a mobile phone number.
+              </p>
+              <p></p>
+              <div
+                class="d-grid gap-2 d-md-block"
+                *ngIf="data.documentsAdminStatus == null"
+                style="margin-left: 53px"
+              >
+                <!-- <button class="btn btn-primary" type="button">Verify Now</button> -->
+                <button
+                  type="button"
+                  style="background-color: #0354a6"
+                  class="btn btn-primary btn-lg"
+                  [routerLink]="['/auth/personal-information']"
+                >
+                  Verify Now 
+                </button>
+              </div>
+
+              <div
+                class="d-flex flex-row"
+                style="margin-top: 7px"
+                *ngIf="data.documentsAdminStatus == 'pending'"
+              >
+                <div
+                  style="
+                    height: 15px;
+                    width: 17px;
+                    margin-top: 18px;
+                    border: white;
+                  "
+                ></div>
+                <p
+                  style="
+                    font-size: 18px;
+                    color:yellow;
+                    margin-left: 68px;
+                   
+                  "
+                >
+                  Pending
+                </p>
+              </div>
+
+              <div
+                class="d-flex flex-row"
+                style="margin-top: 7px"
+                *ngIf="data.documentsAdminStatus == 'success'"
+              >
+                <img
+                  src="../../../assets/Landing page AIDUS/vector tick.png"
+                  alt=""
+                  style="height: 15px; width: 17px; margin-top: 18px"
+                />
+                <p
+                  style="
+                    font-size: 18px;
+                    color: #57e257;
+                    margin-left: 8px;
+                    margin-top: 13px;
+                  "
+                >
+                  Verified
+                </p>
+                <button
+                  type="button"
+                  style="
+                    background-color: #0354a6;
+                    margin-left: 41px;
+                    height: 48px;
+                  "
+                  class="btn btn-primary btn-lg"
+                  [routerLink]="['/auth/personal-information']"
+                >
+                  Edit Now
+                </button>
+              </div>
+              <div
+                class="d-flex flex-row"
+                style="margin-top: 0px"
+                *ngIf="data.documentsAdminStatus == 'rejected'"
+              >
+                <img
+                  src="../../../assets/Landing page AIDUS/vector cross.png"
+                  alt=""
+                  style="
+                    height: 18px;
+                    width: 18px;
+                    margin-top: 25px;
+                    
+                  "
+                /><span
+                  style="
+                    font-size: 18px;
+                    color: red;
+                    margin-left: 6px;
+                    margin-top: 21px;
+                  "
+                  >Rejected</span
+                >
+                <button
+                  type="button"
+                  style="
+                    background-color: #0354a6;
+                    margin-left: 41px;
+                    height: 48px;
+                    width: 120px;
+                    margin-top: 9px;
+                  "
+                  (click)="open(content)"
+                  class="btn btn-primary btn-lg"
+                >
+                  Info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <div class="card-body card-body1">
+              <h4 class="card-title" style="font-size: 21px">
+                2 Factor Authentication
+              </h4>
+              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+              <p class="card-text" style="font-size: 14px">
+                Complete 2 factor authentication Verification to unlock all
+                features.
+              </p>
+              <p></p>
+              <div
+                class="d-grid gap-2 d-md-block"
+                *ngIf="data.google2FAVerified == false"
+                style="margin-left: 53px"
+              >
+                <!-- <button class="btn btn-primary" type="button">Verify Now</button> -->
+                <button
+                  type="button"
+                  style="background-color: #0354a6"
+                  class="btn btn-primary btn-lg"
+                  [routerLink]="['/auth/identification-verification']"
+                >
+                  Verify Now
+                </button>
+              </div>
+              <div
+                class="d-flex flex-row"
+                style="margin-top: 25px"
+                *ngIf="data.google2FAVerified == true"
+              >
+                <img
+                  src="../../../assets/Landing page AIDUS/vector tick.png"
+                  alt=""
+                  style="height: 18px; width: 18px; margin-top: 17px"
+                /><span
+                  style="
+                    font-size: 18px;
+                    color: #57e257;
+                    margin-left: 8px;
+                    margin-top: 12px;
+                  "
+                  >Verified</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 2rem" id="address">
+        <h3 style="margin-left: 1rem">Address Book</h3>
+        <div style="margin: 1rem; border: 2px solid #d4e4f5; padding: 1rem">
+          <span
+            style="
+              width: 209px;
+              font-size: 18px;
+              font-weight: 600;
+              margin-bottom: 5rem;
+            "
+            >Whitelisted Addresses</span
+          >
+          <ul class="list-group">
+            <li
+              class="list-group-item d-flex align-items-center"
+              style="justify-content: space-between"
+              *ngFor="let address of addressList"
+            >
+              {{ address.addresName }}-{{ address.address }}
+              <!-- <img
+                src="../../../assets/Landing page AIDUS/vector cross.png"
+                alt=""
+              /> -->
+            </li>
+            <!-- <li
+              class="list-group-item d-flex align-items-center"
+              style="justify-content: space-between"
+            >
+              1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2<img
+                src="../../../assets/Landing page AIDUS/vector cross.png"
+                alt=""
+              />
+            </li>
+            <li
+              class="list-group-item d-flex align-items-center"
+              style="justify-content: space-between"
+            >
+              1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2<img
+                src="../../../assets/Landing page AIDUS/vector cross.png"
+                alt=""
+              />
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <div
+        style="
+          background-color: #0354a6;
+          width: 894px;
+          margin-left: 1rem;
+          padding: 11px 0px;
+        "
+      >
+        <div class="d-flex flex-row">
+          <div class="" style="margin-top: 5px; margin-left: -13px">
+            <span class="text1">Add A New Address</span>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            style="
+              color: #0354a6;
+              background-color: #ffffff;
+              width: 135px;
+              margin-left: 550px;
+            "
+            [routerLink]="['/dashboard/add-address']"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+      <div style="margin-left: 1rem; margin-top: 2rem;" id="security">
+        <h2 style="margin-bottom: 15px;">Security</h2>
+        <div class="row">
+          <!-- <div style="display: flex; justify-content: space-between ; margin-top: 2rem;"> -->
+          <div class="col-md">
+            <span class="security1">Google Authenticator(Recommended)</span>
+          </div>
+          <div class="col-md-3" *ngIf="data.google2FAVerified == false">
+            <img
+              src="../../../assets/Landing page AIDUS/vector cross.png"
+              alt=""
+              
+            />
+           <span style="margin-left: 6px;">Unset</span>
+          </div>
+
+          <div class="col-md-3" *ngIf="data.google2FAVerified == true">
+            <img
+              src="../../../assets/Landing page AIDUS/vector tick.png"
+              alt=""
+            />
+            Set
+          </div>
+
+          <div class="col-md-3">
+            <button
+              *ngIf="data.google2FAVerified == false"
+              class="btn btn-primary"
+              type="button"
+              style="
+                float: right;
+                width: 109px;
+                margin-right: 10px;
+                background-color: #0354a6;
+              "
+              [routerLink]="['/auth/identification-verification']"
+            >
+              Enable
+            </button>
+          </div>
+
+          <!-- </div> -->
+          <div>
+            <span>
+              Protect your account and transactions.<br />Having trouble?
+            </span>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 1rem">
+          <!-- <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 1rem;
+            "
+          > -->
+          <div class="col-md">
+            <span class="security1">Phone Number Verification</span>
+          </div>
+          <div class="col-md-3" *ngIf="data.phoneVerified == true">
+            <img
+              src="../../../assets/Landing page AIDUS/vector tick.png"
+              alt=""
+            />
+            {{ data.mobileNo }}
+          </div>
+          <div class="col-md-3" *ngIf="data.phoneVerified == false">
+            <img
+              src="../../../assets/Landing page AIDUS/vector cross.png"
+              alt=""
+            />
+          </div>
+          <div class="col-md-3" style="float: right">
+            <button
+              class="btn btn-primary me-md-2"
+              type="button"
+              style="float: right; width: 109px; background-color: #0354a6"
+              [routerLink]="['/auth/personal-information']"
+            >
+              Change
+            </button>
+          </div>
+          <!-- </div> -->
+          <div>
+            <span> Protect your account and transactions. </span>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 1rem">
+          <div class="col-md">
+            <span class="security1">Email Address Verification </span>
+          </div>
+          <div class="col-md-3" *ngIf="data.emailVerified == true">
+            <img
+              src="../../../assets/Landing page AIDUS/vector tick.png"
+              alt=""
+            />Set
+            {{ data.email }}
+          </div>
+          <div class="col-md-3" *ngIf="data.emailVerified == false">
+            <img
+              src="../../../assets/Landing page AIDUS/vector cross.png"
+              alt=""
+              style="margin-right: 5px;"
+            />Unset
+          </div>
+          <div class="col-md-3" style="float: right">
+            <button
+              class="btn btn-primary me-md-2"
+              type="button"
+              style="float: right; width: 109px; background-color: #0354a6"
+              [routerLink]="['/auth/verify']"
+            >
+              Verified
+            </button>
+          </div>
+          <!-- </div> -->
+          <div>
+            <span style="margin-top: 2px">
+              Protect your account and transactions.
+            </span>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 1rem">
+          <!-- <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 1rem;
+            "
+          > -->
+          <div class="col-md">
+            <span class="security1">Login Password</span>
+          </div>
+          <div class="col-md-3" style="float: right">
+            <button
+              class="btn btn-primary me-md-2"
+              type="button"
+              style="float: right; width: 109px; background-color: #0354a6"
+              [routerLink]="['/auth/forgot']"
+            >
+              Change
+            </button>
+          </div>
+          <!-- </div> -->
+          <div>
+            <span>Login password is used to log in to your account.</span>
+          </div>
+        </div>
+      </div>
+      <app-loader *ngIf="fetching">{{ fetching }}</app-loader>
+      <div class="d-grid gap-2" style="margin-top: 3rem">
+        <button
+          class="btn btn-primary"
+          type="button"
+          style="height: 54px; background-color: #0354a6"
+          (click)="logout()"
+        >
+          Log Out
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div
+    class="d-flex justify-content-center align-items-center"
+    style="height: 45vh"
+  >
+    <div class="card border-0">
+      <div
+        class="card-body2 d-flex flex-column justify-content-around align-items-center"
+      >
+        <h4 style="color: red">Sorry, we are unable to approve your</h4>
+        <h4 style="color: red">KYC status</h4>
+        <p class="card-text">{{ this.dataRejection }}</p>
+        <button
+          class="btn2"
+          [routerLink]="['/auth/verify']"
+          (click)="modal.close('Save click')"
+        >
+          Apply for KYC Again
+        </button>
+        <!-- <button class="btn1"  (click)="modal.close('Save click')">Skip For Now</button> -->
+      </div>
+    </div>
+  </div>
+</ng-template>

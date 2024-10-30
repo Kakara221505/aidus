@@ -1,0 +1,143 @@
+.bg {
+  /* background: aliceblue; */
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  /* border-radius: 6px; */
+  /* padding: 16px; */
+  height: 700px;
+  padding: 0px;
+  margin-top: -15px;
+  background-image: url("../../../assets/Background.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='../../../assets/Landing page AIDUS/ep_arrow-right-bold.png' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.btn0 {
+  width: 245px;
+  background-color: #0354a6;
+  margin-top: 30px;
+  height: 56px;
+}
+
+.bgtext1 {
+  /* padding: 10px; */
+  /* background: aliceblue; */
+  /* width: 640px; */
+  padding-left: 140px;
+  padding-top: 140px;
+}
+
+.slider{
+  font-weight: 600;
+  font-size: 56px
+}
+.slider1{
+  font-weight: 600;
+  font-size: 56px;
+  color: #0354a6;
+  margin-top: -31px;
+  margin-bottom: 20px;
+}
+.slider2{
+  font-weight: 600; 
+  font-size: 56px; 
+  color: #0354a6
+}
+.slider3{
+  font-weight: 600; 
+  font-size: 56px; 
+  color: #13524e
+}
+.row{
+  margin-top: 15px
+}
+.content{
+  font-size: 22px;
+}
+.image{
+  height: 465px;
+  width: 488px;
+  margin-top: 100px;
+  margin-left: 80px;
+  /* margin-bottom: 70px; */
+  background-color: aliceblue;
+}
+.image1{
+  height: 465px;
+    width: 488px;
+    margin-top: 100px;
+    /* padding-left: 80px; */
+    background-color: aliceblue;
+}
+.bgtext2 {
+  padding-left: 40px
+}
+@media only screen and (max-width: 600px) {
+  .image{
+    height: 350px;
+    width: 375px;
+    margin-top: 100px;
+    margin-left: 80px;
+    background-color: aliceblue;
+  }
+
+  .bgtext1 {
+    /* padding: 10px; */
+    /* background: aliceblue; */
+    /* width: 640px; */
+    padding-left: 60px;
+    padding-top: 143px;
+  }
+  .slider{
+    font-weight: 600;
+    font-size: 56px
+  }
+  .slider1{
+    font-weight: 600;
+    font-size: 36px;
+    color: #0354a6;
+    margin-top: -31px;
+    margin-bottom: 20px;
+  }
+  .slider2{
+    font-weight: 600; 
+    font-size: 35px; 
+    color: #0354a6
+  }
+  .slider3{
+    font-weight: 600; 
+    font-size: 36px; 
+    color: #13524e
+  }
+  .row{
+    margin-top: 15px
+  }
+  .content{
+    font-size: 22px;
+  }
+  .bg {
+    /* background: aliceblue; */
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+    /* border-radius: 6px; */
+    /* padding: 16px; */
+    height: 700px;
+    padding: 0px;
+    margin-top: -15px;
+    background-image: url("../../../assets/Background.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+  
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='../../../assets/Landing page AIDUS/ep_arrow-right-bold.png' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+}
+
+
